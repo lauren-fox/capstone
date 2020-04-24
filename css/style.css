@@ -554,11 +554,11 @@ a:visited{
 
 #expand{
   display: hidden;
-  background-color: rgb(218, 131, 0);
+  background-color: white;
   display: none;
   width: 100vw;
   height: 100vh;
-  z-index: 10003;
+  z-index: 1000000003;
   position: absolute;
   top: 0;
   left: 0;
@@ -567,9 +567,16 @@ a:visited{
 }
 
 #expand-text{
-  font-size: 3rem;
-  z-index: 10005;
+  font-size: 40px;
+  z-index: 100000005;
   opacity: 0;
+  color: #be4d4a;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+
 }
 
 
@@ -776,5 +783,4 @@ a:visited{
   top:0;
   left: 0;
   transform: scale(0);
-
 }
