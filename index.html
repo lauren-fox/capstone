@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>The New York School</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div class="load">
+  <div id="background"></div>
+  <!-- <div id="header">THE NEW YORK SCHOOL</div> -->
+  <div class="image-caption" id="castelli-1">Leo Castelli Gallery, 8 East 77th Street</div>
+  <div class="image-caption" id="castelli-2">Leo Castelli Gallery, 8 East 77th Street</div>
+  <div class="image-caption" id="castelli-3">Leo Castelli Gallery, 8 East 77th Street</div>
+  <div class="image-caption" id="rothko-1">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="rothko-2">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="rothko-3">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="parsons-1">Betty Parsons Gallery, 15 East 57th Street</div>
+  <div class="image-caption" id="parsons-2">Betty Parsons Gallery, 15 East 57th Street</div>
+  <div class="image-caption" id="art-of-this-century-1">Art of this Century Gallery, 30 West 57th Street</div>
+  <div class="image-caption" id="art-of-this-century-2">Art of this Century Gallery, 30 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-1">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-2">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-3">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="moma-1">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-2">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-3">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-4">Museum of Modern Art, 11 West 53rd Street</div>
+  <!-- <div id="moma-info">MoMA info here.</div> -->
+<!-- <div class="overlay"><div class="intro"><span id="underline">The New York School</span> was an informal group of American poets, painters, dancers, and musicians that was active<br>in the 1950s and 60s in New York City. It represented, and is synonymous with, the art movement of <span id="underline">Abstract Expressionism</span>.</div></div>
+<svg id="x" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.78 79.78"><defs><style>.cls-1{fill:#231f20;}</style></defs><rect class="cls-1" x="-6.23" y="29.71" width="92.34" height="20.49" transform="translate(39.9 -16.6) rotate(45)"/><rect class="cls-1" x="-6.23" y="29.71" width="92.34" height="20.49" transform="translate(96.37 39.9) rotate(135)"/></svg> -->
+  
+<svg id="info-button" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.99 23.31"><defs><style>.cls-1{fill:#231f20;}</style></defs><path d="M16.12,26.91l1.59-6.51c.72-2.94.81-3.39-1.56-3.39l.15-.54,6.11-1.86c-.44,1.59-1,3.48-1.71,6.57l-1.58,6.45c-.27,1.11-.42,2,.45,2s2.49-1.05,3.78-3.18l.48.3c-1.68,3.09-4,4.68-5.79,4.68-2.13,0-2.61-1.5-1.89-4.5Zm7.11-16.65c-.69,2-3.93.93-3.24-1.08s4-.93,3.24,1.11Z" transform="translate(-15.83 -8.1)"/></svg><div id="expand"></div>
+<div id="expand-text">Expand your browser size to keep exploring!</div>
+  <div id="container"
+  data-scalar-x="525" data-scalar-y="1400"
+  data-relative-input="true"
+  data-origin-x="0.5" data-origin-y="0.5"
+  data-relative-input="true"
+  data-pointer-events="true">
+    <div data-depth="0.08">
+      <a><div id="image1" class="image ues castelli"></div></a>
+      <a><div id="image2" class="image ues castelli"></div></a>
+      <div id="image5" class="image uws century"></div>
+      <div id="image6" class="image uws century"></div>
+      <div id="image7" class="image uws century"></div>
+      <div id="image8" class="image uws janis"></div>
+      <div id="image9" class="image uws janis"></div>
+      <div id="image10" class="image ues rothko"></div>
+      <div id="image11" class="image ues rothko"></div>
+      <div id="image12" class="image ues rothko"></div>
+      <div id="image13" class="image midtown moma"></div>
+      <div id="image14" class="image uws parsons"></div>
+      <div id="image15" class="image uws parsons"></div>
+      <div id="image16" class="image midtown moma"></div>
+      <div id="image17" class="image midtown moma"></div>
+      <div id="image18" class="image midtown moma"></div>
+    </div>
+  </div>
+
+<div class="site-title">The New York School</div>
+
+<div class="sidebar" id="leo-castelli">
+  <div class="subhead">ABOUT THE GALLERY</div>
+  <div class="body-copy"><u>The Leo Castelli Gallery</u> was founded in 1957. Leo Castelli gave Jasper Johns, Roy Lichtenstein, and Frank Stella, among others, their first one-man shows. The gallery has been the epicenter of the Pop Art movement, Minimal movement, and Conceptual Art. The gallery continues its activity today on the third floor of brownstone in the Upper East side.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">8 East 77th Street</div>
+  <div class="subhead">DATES OPENED</div>
+  <div class="body-copy">1954–Present Day</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+
+<div class="sidebar" id="mark-rothko">
+  <div class="subhead">ABOUT THE ARTIST</div>
+  <div class="body-copy">Mark Rothko’s search to express profound emotion through painting culminated in his now-signature compositions of richly colored squares filling large canvases, evoking what he referred to as “the sublime.” One of the pioneers of Color Field Painting, Rothko’s abstract arrangements of shapes, ranging from the slightly surreal biomorphic ones in his early works to the dark squares and rectangles in later years, are intended to evoke the metaphysical through viewers’ communion with the canvas in a controlled setting. “I'm not an abstractionist,” he once said.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">157 East 69th Street</div>
+  <div class="subhead">DATES</div>
+  <div class="body-copy">1903–1970</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+  
+
+<div class="sidebar" id="betty-parsons">
+  <div class="subhead">ABOUT THE ARTIST</div>
+  <div class="body-copy">Once referred to as "the den mother of Abstract Expressionism," <u>Betty Parsons</u> was an early advocate of the great Abstract Expressionists, including Pollock, Rothko, Reinhardt, Still and Newman, long before they all achieved notoriety. Her midtown gallery, which opened in 1946 (and closed every summer so that Parsons could focus on her own art), gave the Abstract Expresionist artists their first large-scale exposure, making it one of the most prestigious art galleries in New York. In its later years, the <u>Parsons Gallery</u> did much to promote the works of many gay, lesbian and bisexual artists, including Agnes Martin, Ellsworth Kelly, Jasper Johns and Robert Rauschenberg.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">15 West 57th Street</div>
+  <div class="subhead">DATES</div>
+  <div class="body-copy">1900–1982</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+
+<div class="sidebar" id="century-gallery">
+  <div class="subhead">ABOUT THE GALLERY</div>
+  <div class="body-copy">In 1942, Guggenheim opened her <u>Art of This Century Gallery</u>, with sections devoted to Surrealism, Kinetic art, Cubist, and abstract art; as art historian Dore Ashton noted, her "gallery was one of the first international galleries in New York City mixing American and European art." Anton Gill described how, at the gallery's premier, Guggenheim wore, "one earring made for her by Calder and another by Yves Tanguy, to express her equal commitment to the schools of art she supported."<br><br>Frederick Kiesler designed the innovative gallery to create a totally modern experience; some paintings were hung on universal joints, which allowed viewers to turn the paintings to experience different angles of light, thus, creating a more intimate relationship between the viewer and the work. He created an unusual lighting design that occasionally plunged an entire gallery into darkness, and his furniture acted both as seats for gallery-goers as well as easels for paintings.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">30 West 57th Street</div>
+  <div class="subhead">DATES</div>
+  <div class="body-copy">1898–1979</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+
+
+<div class="sidebar" id="janis-gallery">
+  <div class="subhead">ABOUT THE GALLERY</div>
+  <div class="body-copy"><u>The Sidney Janis Gallery</u> first opened its doors in 1948 and over the ensuing decades became a beacon for some of New York City's most avant-garde artists. Art collector, dealer and businessman Sidney Janis, along with his wife Harriet, swiftly established the gallery's reputation by curating exhibitions of Léger, Mondrian, the de Stijl artists, the Futurists and the Fauves. Beginning in 1952, Janis gave Jackson Pollock the first of three solo shows, further establishing the cultural dominance of Abstract Expressionism. Ten years later, the gallery put on its most famous exhibition, The New Realists. Throughout the gallery's existence, it ably and consistently measured the pulse of the New York art world in showcasing some of the finest and riskiest avant-garde art of the 20th century.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">110 West 57th Street</div>
+  <div class="subhead">DATES</div>
+  <div class="body-copy">1896–1989</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+
+<div class="sidebar" id="moma">
+  <div class="subhead">ABOUT THE GALLERY</div>
+  <div class="body-copy">Founded in 1929, <u>The Museum of Modern Art (MoMA)</u> in midtown Manhattan was the first museum devoted to the modern era. Today MoMA’s rich and varied collection offers a panoramic overview of modern and contemporary art, from the innovative European painting and sculpture of the 1880s to today's film, design, and performance art. From an initial gift of eight prints and one drawing, the collection has grown to include over 150,000 paintings, sculptures, drawings, prints, photographs, architectural models and drawings, and design objects; approximately 22,000 films and four million film stills; and, in its Library and Archives, over 300,000 books, artist books, and periodicals, and extensive individual files on more than 70,000 artists. Collection highlights include Claude Monet’s Water Lilies, Vincent van Gogh’s The Starry Night, and Pablo Picasso’s Les Demoiselles d'Avignon, along with more recent works by Andy Warhol, Elizabeth Murray, Cindy Sherman, and many others.</div>
+  <div class="subhead">ADDRESS</div>
+  <div class="body-copy">11 West 53rd Street</div>
+  <div class="subhead">DATES</div>
+  <div class="body-copy">1929–Present</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <div class="subhead">LEARN MORE</div>
+  <a><div class="source">NYTimes →</div></a>
+  <a><div class="source">The New Yorker →</div></a>
+  <a><div class="source">Artsy →</div></a>
+  <div class="get-directions">Get Directions →</div>
+</div>
+
+
+
+  <div class="title">The New York School</div>
+  <svg id="cursor" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.92 39.64"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:3px;}</style></defs><line class="cls-1" x1="19.96" x2="19.96" y2="39.64"/><line class="cls-1" x1="39.92" y1="19.82" y2="19.82"/></svg>
+</div>
+<div id="haze"></div>
+<div class="info-popup">
+
+<canvas id="paint"></canvas>
+
+<div class="info-text">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div>
+</div>
+</body>
+</html>
