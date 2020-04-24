@@ -94,8 +94,8 @@ body{
 }
 
 #image1 {
-  top: -1050px;
-  left: 1050px;
+  top: -1450px;
+  left: 650px;
   background-image: url('../images/lcg-3.png');
   background-size: cover;
   width: 250px;
@@ -110,8 +110,8 @@ body{
 #image2{
   background: url('../images/lcg-5.png');
   background-size: cover;
-  top: -1120px;
-  left: 880px;
+  top: -1520px;
+  left: 480px;
   width: 270px;
   height: 350px;
   
@@ -147,7 +147,7 @@ body{
 
 /* art of this century gallery */
 #image5 {
-  top: -150px;
+  top: -350px;
   left: 70px;
   height: 170px;
   width: 220px;
@@ -161,7 +161,7 @@ body{
 }
 
 #image6 {
-  top: -250px;
+  top: -450px;
   width: 260px;
   height: 340px;
   left: 220px;
@@ -178,14 +178,13 @@ body{
 /* sidney janis gallery */
 
 #image7 {
-  top: 250px;
+  top: -150px;
   left: -80px;
   height: 240px;
   width: 190px;
   background-size: cover;
   background: url("../images/sidney-janis-3.png");
   background-size: cover;
-
   z-index: 100 !important;
 }
 #image7:hover {
@@ -194,7 +193,7 @@ body{
 }
 
 #image8 {
-  top: 350px;
+  top: -50px;
   left: -300px;
   height: 300px;
   width: 250px;
@@ -207,7 +206,7 @@ body{
 }
 
 #image9{
-  top: 190px;
+  top: -210px;
   left: -450px;
   height: 140px;
   width: 210px;
@@ -222,8 +221,8 @@ body{
 
 /* mark rothko studio */
 #image10 {
-  top: -650px;
-  left: 1240px;
+  top: -950px;
+  left: 840px;
   height: 380px;
   width: 290px;
   background-image: url("../images/mark-rothko-1.jpeg");
@@ -234,8 +233,8 @@ body{
   height: calc(350px * 1.6);
 }
 #image11 {
-  top: -750px;
-  left: 1550px;
+  top: -1150px;
+  left: 1150px;
   height: 200px;
   width: 290px;
   background-image: url("../images/mark-rothko-3.jpeg");
@@ -246,8 +245,8 @@ body{
   height: calc(200px * 1.6);
 }
 #image12 {
-  top: -420px;
-  left: 1480px;
+  top: -720px;
+  left: 1080px;
   height: 200px;
   width: 170px;
   background-image: url("../images/mark-rothko-2.jpeg");
@@ -287,8 +286,8 @@ body{
 
 /* MoMA */
 #image13 {
-  top: 700px;
-  left: 470px;
+  top: 500px;
+  left: 570px;
   height: 290px;
   width: 400px;
   background-image: url("../images/moma-1.jpeg");
@@ -300,8 +299,8 @@ body{
 }
 
 #image16{
-  top: 760px;
-  left: 400px;
+  top: 560px;
+  left:500px;
   height: 130px;
   width: 200px;
   background-image: url("../images/moma-2.jpg");
@@ -313,8 +312,8 @@ body{
 }
 
 #image17{
-  top: 900px;
-  left: 200px;
+  top: 700px;
+  left: 300px;
   height: 250px;
   width: 190px;
   background-image: url("../images/moma-3.jpeg");
@@ -326,8 +325,8 @@ body{
 }
 
 #image18{
-  top: 1100px;
-  left: 300px;
+  top: 900px;
+  left: 400px;
   height: 210px;
   width: 300px;
   background-image: url("../images/moma-4.jpeg");
@@ -338,6 +337,10 @@ body{
   height: calc(210px * 1.6);
 }
 
+
+
+
+
 .image-caption{
   width: 100vw;
   text-align: center;
@@ -345,10 +348,75 @@ body{
   z-index: 1000 !important;
   color: black;
   font-family: 'F Grotesk book';
-  font-size: 19px;
+  font-size: 21px;
   bottom: 39px;
   opacity: 0;
 }
+
+/* de kooning studio */
+#image19{
+  top: 1350px;
+  left: -100px;
+  height: 300px;
+  width: 390px;
+  background-image: url("../images/de-kooning-2.jpg");
+  background-size: cover;
+}
+#image19:hover {
+  width: calc(290px * 1.6);
+  height: calc(200px * 1.6);
+}
+
+#image20{
+  top: 1300px;
+  left: -200px;
+  height: 170px;
+  width: 260px;
+  background-image: url("../images/de-kooning-1.jpg");
+  background-size: cover;
+}
+#image20:hover {
+  width: calc(260px * 1.6);
+  height: calc(170px * 1.6);
+}
+
+#image21{
+  top: 1600px;
+  left: 450px;
+  height: 170px;
+  width: 260px;
+  background-image: url("../images/tavern-2.jpg");
+  background-size: cover;
+}
+#image21:hover {
+  width: calc(260px * 1.6);
+  height: calc(170px * 1.6);
+}
+#image22{
+  top: 1700px;
+  left: 100px;
+  height: 350px;
+  width: 260px;
+  background-image: url("../images/tavern-3.jpg");
+  background-size: cover;
+}
+#image22:hover {
+  width: calc(210px * 1.6);
+  height: calc(300px * 1.6);
+}
+#image23{
+  top: 1850px;
+  left: 330px;
+  height: 150px;
+  width: 250px;
+  background-image: url("../images/tavern-4.jpg");
+  background-size: cover;
+}
+#image23:hover {
+  width: calc(260px * 1.6);
+  height: calc(170px * 1.6);
+}
+
 
 @font-face {
   font-family: 'Suisseworks book';
@@ -559,9 +627,11 @@ a:visited{
   width: 100vw;
   height: 100vh;
   z-index: 1000000003;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  top:0;
   align-items: center;
   align-content: center;
 }
@@ -575,16 +645,38 @@ a:visited{
   margin-top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
-
 }
 
+.arrow{
+  position: absolute;
+  color: #be4d4a;
+  width: 50vw;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#expand-arrow{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SuisseWorks-Regular';
+  font-size: 190px;
+  z-index: 100000005;
+  opacity: 0;
+  color: #be4d4a;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
 
 @media screen and (max-width: 1000px) {
   #expand {
     display: block;
   }
   #expand-text{
+    opacity: 1;
+  }
+  #expand-arrow{
     opacity: 1;
   }
 }
@@ -630,8 +722,9 @@ a:visited{
 .sidebar{
   height: 100vh;
   width: 50vw;
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
   margin-left: -55vw;
 
 /* change margin back for animation to work */
@@ -645,11 +738,67 @@ a:visited{
   box-shadow: 2px 5px 8px -3px  #5482b4;
   color:#5482b4;
 }
+#leo-castelli a{
+  color:#5482b4;
+}
+#leo-castelli.get-directions{
+  border:1px solid #5482b4;
+}
+
+#mark-rothko a{
+  color:#5482b4;
+}
+#mark-rothko.get-directions{
+  border:1px solid #5482b4;
+}
+
+#tavern a{
+  color:#129AA0;
+}
+#tavern.get-directions{
+  border:1px solid #129AA0;
+}
+#de-kooning a{
+  color:#129AA0;
+}
+#de-kooning.get-directions{
+  border:1px solid #129AA0;
+}
+
 
 #mark-rothko.sidebar{
   box-shadow: 2px 5px 8px -3px  #5482b4;
   overflow: scroll;
   color:#5482b4;
+}
+
+#betty-parsons a{
+  color:#be4d4a;
+}
+#betty-parsons.get-directions{
+  border:1px solid #be4d4a;
+}
+
+#century-gallery a{
+  color:#be4d4a;
+}
+#century-gallery.get-directions{
+  border:1px solid #be4d4a;
+}
+
+#tavern.sidebar{
+  box-shadow: 2px 5px 8px -3px  #129AA0;
+  color:#129AA0;
+}
+
+#de-kooning.sidebar{
+  box-shadow: 2px 5px 8px -3px  #129AA0;
+  color:#129AA0;
+}
+
+#betty-parsons.sidebar{
+  box-shadow: 2px 5px 8px -3px  #129AA0;
+  color:#be4d4a;
 }
 
 .return{
@@ -672,6 +821,7 @@ a:visited{
   position: static;
   margin-top: 3px;
   margin-left: 25px;
+  padding-bottom: 15px;
   width: 45vw;
   line-height: 27px;
 }
@@ -679,20 +829,39 @@ a:visited{
 .subhead{
   font-family: 'F Grotesk demi';
   font-size: 12px;
-  margin-top: 25px;
+  margin-top: 10px;
   margin-left: 25px;
   width: 45vw;
   line-height: 26px;
+  text-transform: uppercase;
+}
+
+.top-link{
+  margin-top: 25px;
+}
+
+.source-link{
+  line-height: 20px;
+  padding-bottom: 5px;
+}
+
+.source-link:hover{
+  text-decoration: underline;
 }
 
 .get-directions{
+  border: solid 1px ;
+  width: auto;
   font-family: 'SuisseWorks-Regular';
   font-size: 19px;
   position: absolute;
   bottom: 25px;
   margin-left: 25px;
-  width: 45vw;
   line-height: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .image-box{
@@ -716,6 +885,11 @@ a:visited{
   margin-left: 25px;
   width: 45vw;
   line-height: 27px;
+  padding-bottom: 10px;
+}
+
+.source:hover{
+  font-style: italic;
 }
 
 .site-title{
@@ -723,7 +897,7 @@ a:visited{
   height: 25px;
   width: 100vh;
   font-family: 'F Grotesk book';
-  font-size: 19px;
+  font-size: 21px;
   color: rgb(146, 146, 146);
   position: absolute;
   right: -30vw;
@@ -749,6 +923,12 @@ a:visited{
   box-shadow: 2px 5px 13px -3px  #cb774f;
 }
 
+a{
+  color: none;
+}
+/* a:hover{
+  text-decoration: underline;
+} */
 
 .info-popup{
   width: 40vw;
@@ -783,4 +963,5 @@ a:visited{
   top:0;
   left: 0;
   transform: scale(0);
+
 }
