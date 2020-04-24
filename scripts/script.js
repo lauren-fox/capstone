@@ -1,5 +1,26 @@
 
 $(document).ready(function () {
+
+// Page load fade in
+jQuery(function($){
+    $(document).ajaxSend(function() {
+        $(".loading").fadeIn(300);　
+    });
+        
+    $('body').mouseenter(function(){
+        $.ajax({
+            type: 'GET',
+            success: function(data){
+                console.log(data);
+            }
+        }).done(function() {
+            setTimeout(function(){
+                $(".loading").fadeOut(300);
+            },500);
+        });
+    }); 
+});
+
     // custom cursor
     var cursor = document.getElementById('cursor');
     document.addEventListener('mousemove', function (e) {
@@ -8,6 +29,8 @@ $(document).ready(function () {
         cursor.style.left = x + "px";
         cursor.style.top = y + "px";
     });
+
+    
 
     // homepage panning
     var scene = document.getElementById('container');
@@ -424,7 +447,7 @@ $(window).load(function() {
     targets: '.image',
     scale: 1,
     opacity: 1,
-    duration: 6000,
+    duration: 10000,
   })
 });
 
@@ -440,21 +463,15 @@ $('.castelli').click('click touchstart', function() {
       rotate: '45deg',
       scale: 2,
     })
+    var closeSidebar = anime({
+      targets:'.close-sidebar',
+      left:'50vw'
+    })
   })
 
-  $('.sidebar').click('click touchstart', function() {
-    var sidebar = anime({
-          targets: '.sidebar',
-          marginLeft: '-55vw',
-          duration: 400,
-          easing: 'easeInOutExpo',
-        })
-      var cursorScale = anime({
-        targets: '#cursor',
-        rotate: '0deg',
-        scale: 1,
-      })
-    })
+  
+
+    
 
 
     $('.rothko').click('click touchstart', function() {
@@ -469,21 +486,13 @@ $('.castelli').click('click touchstart', function() {
           rotate: '45deg',
           scale: 2,
         })
+        var closeSidebar = anime({
+          targets:'.close-sidebar',
+          left:'50vw'
+        })
       })
     
-      $('.sidebar').click('click touchstart', function() {
-        var sidebar = anime({
-              targets: '.sidebar',
-              marginLeft: '-55vw',
-              duration: 400,
-              easing: 'easeInOutExpo',
-            })
-          var cursorScale = anime({
-            targets: '#cursor',
-            rotate: '0deg',
-            scale: 1,
-          })
-        })
+      
 
         $('.parsons').click('click touchstart', function() {
           var sidebar = anime({
@@ -497,21 +506,13 @@ $('.castelli').click('click touchstart', function() {
               rotate: '45deg',
               scale: 2,
             })
+            var closeSidebar = anime({
+              targets:'.close-sidebar',
+              left:'50vw'
+            })
           })
         
-          $('.sidebar').click('click touchstart', function() {
-            var sidebar = anime({
-                  targets: '.sidebar',
-                  marginLeft: '-55vw',
-                  duration: 400,
-                  easing: 'easeInOutExpo',
-                })
-              var cursorScale = anime({
-                targets: '#cursor',
-                rotate: '0deg',
-                scale: 1,
-              })
-            })
+          
 
             $('.century').click('click touchstart', function() {
               var sidebar = anime({
@@ -525,22 +526,13 @@ $('.castelli').click('click touchstart', function() {
                   rotate: '45deg',
                   scale: 2,
                 })
+                var closeSidebar = anime({
+                  targets:'.close-sidebar',
+                  left:'50vw'
+                })
               })
             
-              $('.sidebar').click('click touchstart', function() {
-                var sidebar = anime({
-                      targets: '.sidebar',
-                      marginLeft: '-55vw',
-                      duration: 400,
-                      easing: 'easeInOutExpo',
-                    })
-                  var cursorScale = anime({
-                    targets: '#cursor',
-                    rotate: '0deg',
-                    scale: 1,
-                  })
-                })
-
+            
                 $('.janis').click('click touchstart', function() {
                   var sidebar = anime({
                         targets: '#janis-gallery',
@@ -553,21 +545,12 @@ $('.castelli').click('click touchstart', function() {
                       rotate: '45deg',
                       scale: 2,
                     })
+                    var closeSidebar = anime({
+                      targets:'.close-sidebar',
+                      left:'50vw'
+                    })
                   })
                 
-                  $('.sidebar').click('click touchstart', function() {
-                    var sidebar = anime({
-                          targets: '.sidebar',
-                          marginLeft: '-55vw',
-                          duration: 400,
-                          easing: 'easeInOutExpo',
-                        })
-                      var cursorScale = anime({
-                        targets: '#cursor',
-                        rotate: '0deg',
-                        scale: 1,
-                      })
-                    })
 
 
                     $('.moma').click('click touchstart', function() {
@@ -577,6 +560,10 @@ $('.castelli').click('click touchstart', function() {
                             duration: 400,
                             easing: 'easeInOutExpo',
                           })
+                          var closeSidebar = anime({
+                            targets:'.close-sidebar',
+                            left:'50vw'
+                          })
                         var cursorScale = anime({
                           targets: '#cursor',
                           rotate: '45deg',
@@ -584,19 +571,7 @@ $('.castelli').click('click touchstart', function() {
                         })
                       })
                     
-                      $('.sidebar').click('click touchstart', function() {
-                        var sidebar = anime({
-                              targets: '.sidebar',
-                              marginLeft: '-55vw',
-                              duration: 400,
-                              easing: 'easeInOutExpo',
-                            })
-                          var cursorScale = anime({
-                            targets: '#cursor',
-                            rotate: '0deg',
-                            scale: 1,
-                          })
-                        })
+                      
 
                         $('.de-kooning').click('click touchstart', function() {
                           var sidebar = anime({
@@ -604,6 +579,10 @@ $('.castelli').click('click touchstart', function() {
                                 marginLeft: '0vw',
                                 duration: 400,
                                 easing: 'easeInOutExpo',
+                              })
+                          var closeSidebar = anime({
+                                targets:'.close-sidebar',
+                                left:'50vw'
                               })
                             var cursorScale = anime({
                               targets: '#cursor',
@@ -619,12 +598,34 @@ $('.castelli').click('click touchstart', function() {
                                   duration: 400,
                                   easing: 'easeInOutExpo',
                                 })
+                              var closeSidebar = anime({
+                                targets:'.close-sidebar',
+                                left:'50vw'
+                              })
                               var cursorScale = anime({
                                 targets: '#cursor',
                                 rotate: '45deg',
                                 scale: 2,
                               })
                             })
+
+                            $('.sidebar, .close-sidebar').click('click touchstart', function() {
+                              var sidebar = anime({
+                                    targets: '.sidebar',
+                                    marginLeft: '-55vw',
+                                    duration: 400,
+                                    easing: 'easeInOutExpo',
+                                  })
+                                var sidebar = anime({
+                                  targets:'.close-sidebar',
+                                  left: '100vw',
+                                })
+                                var cursorScale = anime({
+                                  targets: '#cursor',
+                                  rotate: '0deg',
+                                  scale: 1,
+                                })
+                              })
 
 
 $('#info-button').click('click touchstart', function() {
@@ -704,6 +705,10 @@ $(function() {
     letsdraw = false;
   });
 });
+
+$body = $("body");
+
+
 
 
 // close document.ready
