@@ -270,7 +270,80 @@ $(document).ready(function () {
             })
     });
 
+    $('#image19').mouseover('click touchstart', function() {
+      var caption = anime({
+            targets: '#de-kooning-1',
+            opacity: 1,
+            duration: 600,
+          })
+  });
+  $('#image19').mouseleave('click touchstart', function() {
+      var caption = anime({
+            targets: '#de-kooning-1',
+            opacity: 0,
+            duration: 600,
+          })
+  });
 
+  $('#image20').mouseover('click touchstart', function() {
+    var caption = anime({
+          targets: '#de-kooning-1',
+          opacity: 1,
+          duration: 600,
+        })
+});
+$('#image20').mouseleave('click touchstart', function() {
+    var caption = anime({
+          targets: '#de-kooning-1',
+          opacity: 0,
+          duration: 600,
+        })
+});
+
+
+$('#image21').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-1',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image21').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-1',
+        opacity: 0,
+        duration: 600,
+      })
+});
+
+$('#image22').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-2',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image22').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-2',
+        opacity: 0,
+        duration: 600,
+      })
+});
+$('#image23').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-3',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image23').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#tavern-3',
+        opacity: 0,
+        duration: 600,
+      })
+});
    
 
   $('#x, .overlay').click('click touchstart', function() {
@@ -322,12 +395,25 @@ $('.uws').mouseover('click touchstart', function() {
 $('.midtown').mouseover('click touchstart', function() {
   var caption = anime({
         targets: '.midtown',
-        borderColor: '#cb774f',
+        borderColor: '#be4d4a',
         duration: 600,
       })
       var caption = anime({
         targets: '.image-caption',
         color: '#cb774f',
+        duration: 600,
+      })
+});
+
+$('.chelsea').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '.chelsea',
+        borderColor: '#129AA0',
+        duration: 600,
+      })
+      var caption = anime({
+        targets: '.image-caption',
+        color: '#129AA0',
         duration: 600,
       })
 });
@@ -511,6 +597,34 @@ $('.castelli').click('click touchstart', function() {
                             scale: 1,
                           })
                         })
+
+                        $('.de-kooning').click('click touchstart', function() {
+                          var sidebar = anime({
+                                targets: '#de-kooning',
+                                marginLeft: '0vw',
+                                duration: 400,
+                                easing: 'easeInOutExpo',
+                              })
+                            var cursorScale = anime({
+                              targets: '#cursor',
+                              rotate: '45deg',
+                              scale: 2,
+                            })
+                          })
+
+                          $('.tavern').click('click touchstart', function() {
+                            var sidebar = anime({
+                                  targets: '#tavern',
+                                  marginLeft: '0vw',
+                                  duration: 400,
+                                  easing: 'easeInOutExpo',
+                                })
+                              var cursorScale = anime({
+                                targets: '#cursor',
+                                rotate: '45deg',
+                                scale: 2,
+                              })
+                            })
 
 
 $('#info-button').click('click touchstart', function() {
