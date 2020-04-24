@@ -9,12 +9,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel='icon' href='favicon.ico' type='image/x-icon'/>
-</head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></head>
 
 <body>
+<div class='loading' style='position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0;'></div>
 <div class="load">
   <div id="background"></div>
+  <div class="close-sidebar"></div>
   <!-- <div id="header">THE NEW YORK SCHOOL</div> -->
   <div class="image-caption" id="castelli-1">Leo Castelli Gallery, 8 East 77th Street</div>
   <div class="image-caption" id="castelli-2">Leo Castelli Gallery, 8 East 77th Street</div>
@@ -63,12 +64,12 @@
       <div id="image10" class="image ues rothko"></div>
       <div id="image11" class="image ues rothko"></div>
       <div id="image12" class="image ues rothko"></div>
-      <div id="image13" class="image midtown moma"></div>
+      <div id="image13" class="image uws moma"></div>
       <div id="image14" class="image uws parsons"></div>
       <div id="image15" class="image uws parsons"></div>
-      <div id="image16" class="image midtown moma"></div>
-      <div id="image17" class="image midtown moma"></div>
-      <div id="image18" class="image midtown moma"></div>
+      <div id="image16" class="image uws moma"></div>
+      <div id="image17" class="image uws moma"></div>
+      <div id="image18" class="image uws moma"></div>
       <div id="image19" class="image chelsea de-kooning"></div>
       <div id="image20" class="image chelsea de-kooning"></div>
       <div id="image21" class="image chelsea tavern"></div>
@@ -156,7 +157,7 @@
   <a><div class="source">NYTimes →</div></a>
   <a><div class="source">The New Yorker →</div></a>
   <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/bL3cQgRNsqGC4fwYA" target="blank"><div class="get-directions">Get Directions →</div></a>
+  <div class="get-directions">Get Directions →</div>
 </div>
 
 
@@ -176,7 +177,7 @@
   <a><div class="source">NYTimes →</div></a>
   <a><div class="source">The New Yorker →</div></a>
   <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/AG35Kj77trMTGjUH8" target="blank"><div class="get-directions">Get Directions →</div></a>
+  <div class="get-directions">Get Directions →</div>
 </div>
 
 <div class="sidebar" id="moma">
@@ -195,7 +196,7 @@
   <a><div class="source">NYTimes →</div></a>
   <a><div class="source">The New Yorker →</div></a>
   <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/1XLR7kqYeCBioYcx5 target="blank"><div class="get-directions">Get Directions →</div></a>
+  <div class="get-directions">Get Directions →</div>
 </div>
 
 <div class="sidebar" id="de-kooning">
@@ -233,7 +234,7 @@
   <a><div class="source">NYTimes →</div></a>
   <a><div class="source">The New Yorker →</div></a>
   <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/iwKVLpc2zb3nyhPq5" target="blank"><div class="get-directions">Get Directions →</div></a>
+  <div class="get-directions">Get Directions →</div>
 </div>
 
 
@@ -242,11 +243,8 @@
   <svg id="cursor" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.92 39.64"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:3px;}</style></defs><line class="cls-1" x1="19.96" x2="19.96" y2="39.64"/><line class="cls-1" x1="39.92" y1="19.82" y2="19.82"/></svg>
 </div>
 <div id="haze"></div>
-<div class="info-popup">
-
-<canvas id="paint"></canvas>
-
-<div class="info-text">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div>
-</div>
+<!-- <canvas id="paint"></canvas> -->
+<div class="info-popup">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div>
+<div class="modal"><!-- Place at bottom of page --></div>
 </body>
 </html>
