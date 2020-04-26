@@ -31,10 +31,11 @@ body{
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 100vw;
+  left: 50vw;
+  transform: scale(0);
   bottom: 0;
   z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
 }
 
 /* .overlay{
@@ -105,6 +106,7 @@ body{
   transition: width 0.5s, height 0.5s ease-in-out;
   transform: scale(0);
   opacity: 0;
+  z-index: 1;
   /* box-shadow: 2px 5px 8px -3px  rgba(66, 66, 66, 0.8); */
 }
 
@@ -545,13 +547,19 @@ body{
     left:-450px;
     transform: rotate(90deg);
 }
+*/
 .right-header{
-    width: 5vh;
-    height: 100vh;
+    width: auto;
+    height: auto;
     position: fixed;
-    right:-450px;
-    transform: rotate(-90deg);
-} */
+    font-family: 'F Grotesk book';
+    font-size: 16px;
+    color: rgba(0,0,0,0.35);
+    z-index: 0;
+    top:50vh;
+    right:-40px;
+    transform: rotate(90deg);
+}
 
 #cursor{
     width: 25px;
@@ -747,10 +755,9 @@ a:visited{
   top: 0;
   bottom: 0;
   margin-left: -55vw;
-
 /* change margin back for animation to work */
   transition: ease-in-out;
-  background-color: white;
+  background-color: rgb(252, 252, 252);
   z-index: 8000000;
 
 }
