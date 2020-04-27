@@ -465,7 +465,7 @@ $('.chelsea').mouseover('click touchstart', function() {
 $(window).load(function() {
   var pageLoad = anime({
     targets: '.image',
-    scale: 1,
+    scale: 1.05,
     opacity: 1,
     duration: 10000,
   })
@@ -713,42 +713,62 @@ $('#haze').click('click touchstart', function() {
      })
 })
 
-
-
-
-
-$(function() {
-  var letsdraw = false;
-
-  var theCanvas = document.getElementById('paint');
-  var ctx = theCanvas.getContext('2d');
-  theCanvas.width = 420;
-  theCanvas.height = 300;
-
-  var canvasOffset = $('#paint').offset();
-
-  $('#paint').mousemove(function(e) {
-    if (letsdraw === true) {
-      ctx.lineTo(e.pageX - canvasOffset.left, e.pageY - canvasOffset.top);
-      ctx.stroke();
-    }
-  });
-
-  $('#paint').mousedown(function() {
-    letsdraw = true;
-    ctx.strokeStyle = 'blue';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(e.pageX - canvasOffset.left, e.pageY - canvasOffset.top);
-  });
-
-  $(window).mouseup(function() {
-    letsdraw = false;
-  });
-});
+$('.image').mouseover('click touchstart', function() {
+  var sidebar = anime({
+     targets: '#cursor',
+      width: '45px',
+      height: '45px',
+      duration: 400,
+      easing: 'easeInOutExpo',
+     })
+})
 
 $body = $("body");
 
+
+var translateX = 0,
+    translateY = 0,
+    translateZ = 0,
+    stepZ = 3,
+    initial_obj_X = 0,
+    initial_obj_Y = 0,
+    initial_mouse_X = 0,
+    initial_mouse_Y = 0;
+
+  function apply_coords() {
+    $("#container").css("transform", 'perspective(100px) translate3d(' + translateX + 'px, ' + translateY + 'px, ' + translateZ + 'px)');
+  }
+
+
+
+  $("#container").on("mousewheel DOMMouseScroll", function(e) {
+
+    e.preventDefault();
+    var delta = e.delta || e.originalEvent.wheelDelta;
+    var zoomOut;
+
+    if (delta === undefined) {
+      delta = e.originalEvent.detail;
+      zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+      zoomOut = !zoomOut;
+    } else {
+      zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+    }
+    if (zoomOut) {
+      translateZ = translateZ - stepZ;
+    } else {
+      translateZ = translateZ + stepZ;
+    }
+
+    if (translateZ > 30){
+      return
+    }
+    if (-translateZ > 90){
+      return
+    }
+    console.log(translateZ)
+    apply_coords();
+  });
 
 
 
