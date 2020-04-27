@@ -531,78 +531,6 @@ body{
 
 
 @font-face {
-  font-family: 'Suisseworks book';
-  src: url('../fonts/SuisseWorks-Book.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Suisseworks';
-  src: url('../fonts/SuisseWorks-RegularItalic.otf') format('opentype'), url('../fonts/SuisseWorks-BookItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Suisseworks';
-  src: url('../fonts/SuisseWorks-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Suisseworks';
-  src: url('../fonts/SuisseWorks-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Suisseworks';
-  src: url('../fonts/SuisseWorks-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'F grotesk';
-  src: url('../fonts/F-Grotesk-Bold-Italic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'F grotesk';
-  src: url('../fonts/F-Grotesk-Thin-Italic.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'F grotesk demi';
-  src: url('../fonts/F-Grotesk-Demi-Italic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'F grotesk demi';
-  src: url('../fonts/F-Grotesk-Demi.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'F grotesk';
-  src: url('../fonts/F-Grotesk-Thin.otf') format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'F grotesk';
-  src: url('../fonts/F-Grotesk-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'F grotesk book';
-  src: url('../fonts/F-Grotesk-Book-Italic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
   font-family: 'F grotesk book';
   src: url('../fonts/F-Grotesk-Book.otf') format('opentype');
   font-weight: 400;
@@ -1138,4 +1066,32 @@ a{
   width: 45px;
   border-bottom: 1px solid black;
   margin-left: 25px;
+}
+
+hr{
+  width: 45vw;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+#about{
+  width: 37vw;
+  height: auto;
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+  background-color: white;
+  color: #be4d4a;
+  z-index: 1000000;
+  font-family: 'F Grotesk book';
+  font-size: 19px;
+  line-height: 26px;
+  padding-left: 20px;
+  padding-top: 18px;
+  padding-right: 50px;
+  padding-bottom: 18px;
+  text-align: left;
+  border: solid 4px #be4d4a;
+  transform: translate(0%, 0%);
 }
