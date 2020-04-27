@@ -2,16 +2,6 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133299060-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-133299060-4');
-</script>
-  <title>The New York School</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="scripts/script.js"></script>
@@ -24,9 +14,9 @@
 <body>
 <div class="close-sidebar"></div>
 
-<div class='loading' style='position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0;'></div>
-<div class="load"></div>
+<div class='loading'></div>
 
+<div id="intro">The New York School</div>
 <div id="background"></div>
 
 
@@ -52,9 +42,16 @@
   <div class="image-caption" id="tavern-1">Cedar Tavern, 82 University Place</div>
   <div class="image-caption" id="tavern-2">Cedar Tavern, 82 University Place</div>
   <div class="image-caption" id="tavern-3">Cedar Tavern, 82 University Place</div>
+  <div class="image-caption" id="kline-1">Franz Kline's Studio, 32 East 10th Street</div>
+  <div class="image-caption" id="kline-2">Franz Kline's Studio, 32 East 10th Street</div>
+  <div class="image-caption" id="krasner-1">Lee Krasner and Jackson Pollock's Studio, 46 East 8th Street</div>
+  <div class="image-caption" id="krasner-2">Lee Krasner and Jackson Pollock's Studio, 46 East 8th Street</div>
+  <div class="image-caption" id="studio35-1">Studio 35, 52 West 8th Street</div>
+  <div class="image-caption" id="studio35-2">Studio 35, 52 West 8th Street</div>
+
 
   
-<svg id="info-button" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.99 23.31"><defs><style>.cls-1{fill:#231f20;}</style></defs><path d="M16.12,26.91l1.59-6.51c.72-2.94.81-3.39-1.56-3.39l.15-.54,6.11-1.86c-.44,1.59-1,3.48-1.71,6.57l-1.58,6.45c-.27,1.11-.42,2,.45,2s2.49-1.05,3.78-3.18l.48.3c-1.68,3.09-4,4.68-5.79,4.68-2.13,0-2.61-1.5-1.89-4.5Zm7.11-16.65c-.69,2-3.93.93-3.24-1.08s4-.93,3.24,1.11Z" transform="translate(-15.83 -8.1)"/></svg><div id="expand"></div>
+<!-- <svg id="info-button" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.99 23.31"><defs><style>.cls-1{fill:#231f20;}</style></defs><path d="M16.12,26.91l1.59-6.51c.72-2.94.81-3.39-1.56-3.39l.15-.54,6.11-1.86c-.44,1.59-1,3.48-1.71,6.57l-1.58,6.45c-.27,1.11-.42,2,.45,2s2.49-1.05,3.78-3.18l.48.3c-1.68,3.09-4,4.68-5.79,4.68-2.13,0-2.61-1.5-1.89-4.5Zm7.11-16.65c-.69,2-3.93.93-3.24-1.08s4-.93,3.24,1.11Z" transform="translate(-15.83 -8.1)"/></svg><div id="expand"></div> -->
 
 
 <div id="expand">
@@ -63,7 +60,7 @@
 </div>
 
   <div id="container"
-  data-scalar-x="600" data-scalar-y="2500"
+  data-scalar-x="600" data-scalar-y="3200"
   data-relative-input="true"
   data-origin-x="0.5" data-origin-y="0.5"
   data-relative-input="true"
@@ -90,168 +87,167 @@
       <div id="image21" class="image chelsea tavern"></div>
       <div id="image22" class="image chelsea tavern"></div>
       <div id="image23" class="image chelsea tavern"></div>
+      <div id="image24" class="image chelsea kline"></div>
+      <div id="image25" class="image chelsea kline"></div>
+      <div id="image26" class="image chelsea krasner"></div>
+      <div id="image27" class="image chelsea krasner"></div>
+      <div id="image28" class="image chelsea studio35"></div>
+      <div id="image29" class="image chelsea studio35"></div>
+      <div id="image30" class="image chelsea studio35"></div>
+      <div id="image31" class="image chelsea studio35"></div>
     </div>
   </div>
 
-<div class="right-header">The New York School</div>
-
 <div class="sidebar" id="leo-castelli">
-  <div class="subhead">ABOUT THE GALLERY</div>
-  <div class="body-copy"><u>The Leo Castelli Gallery</u> was founded in 1957. Leo Castelli gave Jasper Johns, Roy Lichtenstein, and Frank Stella, among others, their first one-man shows. The gallery has been the epicenter of the Pop Art movement, Minimal movement, and Conceptual Art. The gallery continues its activity today on the third floor of brownstone in the Upper East side.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">8 East 77th Street</div>
-  <div class="subhead">DATES OPENED</div>
-  <div class="body-copy">1954–Present Day</div>
+  <div class="subhead">Castelli Gallery,<br>8 East 77th Street</div>
+  <div class="body-copy">The gallery was founded in 1957. Leo Castelli gave Jasper Johns, Roy Lichtenstein, and Frank Stella, among others, their first one-man shows. The gallery has been the epicenter of the Pop Art movement, Minimal movement, and Conceptual Art. The gallery continues its activity today on the third floor of brownstone in the Upper East side.</div>
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
   <!-- <div class="subhead">LEARN MORE</div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">Why Leo Castelli Paid his Artists Even When<br>They Weren’t Making Work →</div></a>
-  <a><div class="source">How Leo Castelli, MoMA, and Two Wealthy Collectors<br>Charted Today’s Rocket-Fueled Art Market →</div></a>
-  <a><div class="source">How Leo Castelli Remade the Art World
-    →</div></a>
-
-  <a href="https://goo.gl/maps/DBF29TMG8ZA1iXgdA" target="_blank"><div class="get-directions">Get Directions →</div></a>
+  <a href="https://www.artsy.net/article/artsy-editorial-leo-castelli-changed-art-market-forever" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/KpeK4DYWJn6xZpDr7" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <div class="source"><b>↗</b> Return to Map</div> -->
+  <!-- <a href="https://goo.gl/maps/DBF29TMG8ZA1iXgdA" target="_blank"><div class="get-directions">Get Directions →</div></a> -->
 </div>
 
 <div class="sidebar" id="mark-rothko">
-  <div class="subhead">ABOUT THE ARTIST</div>
+  <div class="subhead">Rothko Studio,<br>157 East 69th Street</div>
   <div class="body-copy">Mark Rothko’s search to express profound emotion through painting culminated in his now-signature compositions of richly colored squares filling large canvases, evoking what he referred to as “the sublime.” One of the pioneers of Color Field Painting, Rothko’s abstract arrangements of shapes, ranging from the slightly surreal biomorphic ones in his early works to the dark squares and rectangles in later years, are intended to evoke the metaphysical through viewers’ communion with the canvas in a controlled setting. “I'm not an abstractionist,” he once said.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">157 East 69th Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1903–1970</div>
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <div class="get-directions">Get Directions →</div>
+  <a href="https://www.nytimes.com/1970/03/08/archives/mark-rothko-190370-mark-rothko-19031970.html" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/4oR8VsSKkg5iadbMA" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
   
 
 <div class="sidebar" id="betty-parsons">
-  <div class="subhead">ABOUT THE ARTIST</div>
+  <div class="subhead">Betty Parsons Gallery,<br>15 West 57th Street</div>
   <div class="body-copy">Once referred to as "the den mother of Abstract Expressionism," <u>Betty Parsons</u> was an early advocate of the great Abstract Expressionists, including Pollock, Rothko, Reinhardt, Still and Newman, long before they all achieved notoriety. Her midtown gallery, which opened in 1946 (and closed every summer so that Parsons could focus on her own art), gave the Abstract Expresionist artists their first large-scale exposure, making it one of the most prestigious art galleries in New York. In its later years, the <u>Parsons Gallery</u> did much to promote the works of many gay, lesbian and bisexual artists, including Agnes Martin, Ellsworth Kelly, Jasper Johns and Robert Rauschenberg.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">15 West 57th Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1900–1982</div>
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/XfgztbDketEihAzv7" target="blank"><div class="get-directions">Get Directions →</div></a>
+  <a href="https://www.widewalls.ch/betty-parsons-gallery-artist/" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/XwLb8PrTgNXbZk5NA" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
 
 <div class="sidebar" id="century-gallery">
-  <div class="subhead">ABOUT THE GALLERY</div>
-  <div class="body-copy">In 1942, Guggenheim opened her <u>Art of This Century Gallery</u>, with sections devoted to Surrealism, Kinetic art, Cubist, and abstract art; as art historian Dore Ashton noted, her "gallery was one of the first international galleries in New York City mixing American and European art." Anton Gill described how, at the gallery's premier, Guggenheim wore, "one earring made for her by Calder and another by Yves Tanguy, to express her equal commitment to the schools of art she supported."<br><br>Frederick Kiesler designed the innovative gallery to create a totally modern experience; some paintings were hung on universal joints, which allowed viewers to turn the paintings to experience different angles of light, thus, creating a more intimate relationship between the viewer and the work. He created an unusual lighting design that occasionally plunged an entire gallery into darkness, and his furniture acted both as seats for gallery-goers as well as easels for paintings.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">30 West 57th Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1898–1979</div>
+  <div class="subhead">Art of This Century Gallery,<br>30 West 57th Street</div>
+  <div class="body-copy">In 1942, Guggenheim opened her Art of This Century Gallery, with sections devoted to Surrealism, Kinetic art, Cubist, and abstract art; as art historian Dore Ashton noted, her "gallery was one of the first international galleries in New York City mixing American and European art." Anton Gill described how, at the gallery's premier, Guggenheim wore, "one earring made for her by Calder and another by Yves Tanguy, to express her equal commitment to the schools of art she supported."<br><br>Frederick Kiesler designed the innovative gallery to create a totally modern experience; some paintings were hung on universal joints, which allowed viewers to turn the paintings to experience different angles of light, thus, creating a more intimate relationship between the viewer and the work. He created an unusual lighting design that occasionally plunged an entire gallery into darkness, and his furniture acted both as seats for gallery-goers as well as easels for paintings.</div>
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <div class="get-directions">Get Directions →</div>
+  <a href="https://www.telegraph.co.uk/culture/art/3663807/How-curved-walls-and-a-female-Casanova-brought-modern-art-to-America.html" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/5qXnq17o1WGRM5rE7" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
 
 
 <div class="sidebar" id="janis-gallery">
-  <div class="subhead">ABOUT THE GALLERY</div>
-  <div class="body-copy"><u>The Sidney Janis Gallery</u> first opened its doors in 1948 and over the ensuing decades became a beacon for some of New York City's most avant-garde artists. Art collector, dealer and businessman Sidney Janis, along with his wife Harriet, swiftly established the gallery's reputation by curating exhibitions of Léger, Mondrian, the de Stijl artists, the Futurists and the Fauves. Beginning in 1952, Janis gave Jackson Pollock the first of three solo shows, further establishing the cultural dominance of Abstract Expressionism. Ten years later, the gallery put on its most famous exhibition, The New Realists. Throughout the gallery's existence, it ably and consistently measured the pulse of the New York art world in showcasing some of the finest and riskiest avant-garde art of the 20th century.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">110 West 57th Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1896–1989</div>
+  <div class="subhead">Janis Gallery,<br>110 West 57th Street</div>
+  <div class="body-copy">The Sidney Janis Gallery first opened its doors in 1948 and over the ensuing decades became a beacon for some of New York City's most avant-garde artists. Art collector, dealer and businessman Sidney Janis, along with his wife Harriet, swiftly established the gallery's reputation by curating exhibitions of Léger, Mondrian, the de Stijl artists, the Futurists and the Fauves. Beginning in 1952, Janis gave Jackson Pollock the first of three solo shows, further establishing the cultural dominance of Abstract Expressionism. Ten years later, the gallery put on its most famous exhibition, The New Realists. Throughout the gallery's existence, it ably and consistently measured the pulse of the New York art world in showcasing some of the finest and riskiest avant-garde art of the 20th century.</div>
+
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <div class="get-directions">Get Directions →</div>
+  <a href="https://www.latimes.com/archives/la-xpm-1989-11-24-mn-34-story.html" target="blank"><div class="source">Learn More <span style="font-size: 15px; font-weight: bold;">↗</span></div></a>
+  <a href="https://goo.gl/maps/voes1PiT7JRp8ALc9" target="blank"><div class="source">How to Get There <span style="font-size: 15px; font-weight: bold;">↗</span></div></a>
+  <!-- <a><div class="source">Keep Exploring <span style="font-size: 15px; font-weight: bold;">↗</span></div></a> -->
 </div>
 
 <div class="sidebar" id="moma">
-  <div class="subhead">ABOUT THE GALLERY</div>
-  <div class="body-copy">Founded in 1929, <u>The Museum of Modern Art (MoMA)</u> in midtown Manhattan was the first museum devoted to the modern era. Today MoMA’s rich and varied collection offers a panoramic overview of modern and contemporary art, from the innovative European painting and sculpture of the 1880s to today's film, design, and performance art. From an initial gift of eight prints and one drawing, the collection has grown to include over 150,000 paintings, sculptures, drawings, prints, photographs, architectural models and drawings, and design objects; approximately 22,000 films and four million film stills; and, in its Library and Archives, over 300,000 books, artist books, and periodicals, and extensive individual files on more than 70,000 artists. Collection highlights include Claude Monet’s Water Lilies, Vincent van Gogh’s The Starry Night, and Pablo Picasso’s Les Demoiselles d'Avignon, along with more recent works by Andy Warhol, Elizabeth Murray, Cindy Sherman, and many others.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">11 West 53rd Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1929–Present</div>
+  <div class="subhead">Museum of Modern Art,<br>11 East 53rd Street</div>
+  <div class="body-copy">Founded in 1929, The Museum of Modern Art in midtown Manhattan was the first museum devoted to the modern era. Today MoMA’s rich and varied collection offers a panoramic overview of modern and contemporary art, from the innovative European painting and sculpture of the 1880s to today's film, design, and performance art. From an initial gift of eight prints and one drawing, the collection has grown to include over 150,000 paintings, sculptures, drawings, prints, photographs, architectural models and drawings, and design objects; approximately 22,000 films and four million film stills; and, in its Library and Archives, over 300,000 books, artist books, and periodicals, and extensive individual files on more than 70,000 artists. Collection highlights include Claude Monet’s Water Lilies, Vincent van Gogh’s The Starry Night, and Pablo Picasso’s Les Demoiselles d'Avignon, along with more recent works by Andy Warhol, Elizabeth Murray, Cindy Sherman, and many others.</div>
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <div class="get-directions">Get Directions →</div>
+  <a href="https://www.moma.org/about/who-we-are/moma-history" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/dZ2k2g5GEvizL5FdA"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
 
 <div class="sidebar" id="de-kooning">
-  <div class="subhead">ABOUT THE ARTIST</div>
+  <div class="subhead">De Kooning Studio,<br>156 West 22nd Street</div>
   <div class="body-copy">A first-generation Abstract Expressionist, <u>Willem de Kooning</u> is one of the most important artists of the 20th century. In 1950s New York, when painters like Jackson Pollock and Franz Kline were moving away from representational imagery toward pure abstraction, de Kooning maintained a commitment to the figurative tradition, developing a signature style that fused vivid color and aggressive paint handling with deconstructed images of the female form—a then-controversial body of works that has become known as his “Women” paintings. “Flesh was the reason oil paint was invented,” he famously said. Influenced by Arshile Gorky and Pablo Picasso, de Kooning was often thought to have blended Cubism, Expressionism, and Surrealism in his signature style, paving the way for generations of gestural figurative painters like Cecily Brown. Following his “Women” series, de Kooning pursued non-objective lyrical abstraction until his death in 1997.</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">156 West 22nd Street</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1904–1997</div>
+
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <a href="https://goo.gl/maps/VUwGTo2QBgbkDE9C7" target="blank"><div class="get-directions">Get Directions →</div></a>
+  <a href="https://www.artsy.net/article/artsy-editorial-elaine-de-kooning-broke-rules-painting-men-secured-place-art-history" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/yMyKSPcrEQXvwTRf7" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
 
 <div class="sidebar" id="tavern">
-  <div class="subhead">ABOUT THE LOCATION</div>
+  <div class="subhead">Cedar Tavern,<br>82 University Place</div>
   <div class="body-copy">A CVS and a residential building on University Place in the East Village marks the site where the <u>Cedar Tavern</u> stood until 2006. But in the 1950s, the Cedar Tavern was the center of the Greenwich Village intelligentsia, a meeting place for Abstract Expressionist painters, folk singers, and the beatniks.<br><br>It was, in other words, the primary hangout for the avant-garde. Such was its reputation, that it formed the setting of Kurt Vonnegut’s 1987 novel Bluebeard, as the hub where his fictional hero Rabo Karebekian held court with his fellow painterly bohemians. The artist Elaine de Kooning, wife of Willem de Kooning, referred to it as the epicenter of a “decade-long bender” and, as recorded in David Lehman’s history of the period The Last Avant-Garde: The Making of the New York School of Poets, artist Ad Reinhardt said, “We go there to meet the very people we hate most, other painters.”</div>
-  <div class="subhead">ADDRESS</div>
-  <div class="body-copy">82 University Place</div>
-  <div class="subhead">DATES</div>
-  <div class="body-copy">1951–2006</div>
+
   <!-- <div class="image-box">
     <img src="images/lcg-5.png" class="sidebar-images">
     <img src="images/lcg-2.jpg" class="sidebar-images">
     <img src="images/lcg-1.jpg" class="sidebar-images">
   </div> -->
-  <div class="subhead">LEARN MORE</div>
-  <a><div class="source">NYTimes →</div></a>
-  <a><div class="source">The New Yorker →</div></a>
-  <a><div class="source">Artsy →</div></a>
-  <div class="get-directions">Get Directions →</div>
+  <a href="https://www.nytimes.com/2013/05/18/opinion/bye-bye-bohemia.html" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/1GYvFHm22L9GiQZo6" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
 </div>
 
+<div class="sidebar" id="krasner">
+  <div class="subhead">Krasner-Pollock Studio,<br>46 East 8th Street</div>
+  <div class="body-copy">Shortly after relocating to New York City, in 1935 Pollock settled into a Greenwich Village apartment at 46 East 8th Street with his Brother Sande, with whom he would live until 1942 when his love Lee Krasner moved in. This floor-through studio, located between Greene and Mercer Streets, was only $35/month.  Unfortunately, the building Pollock lived in has since been demolished and replaced. In 1931, Jackson Pollock, in need of money for food and rent, decided to set up his artwork on the sidewalk near Washington Square Park (this would become known as the Washington Square Outdoor Art Exhibit).  Willem de Kooning soon joined him.  This public display attracted the attention of Gertrude Vanderbilt Whitney, founder of the Whitney Museum of American Art, and Alfred H. Barr Jr, Director at MoMa.  82 years later and this arts exhibit is still going strong.</div>
+
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <a href="https://www.theguardian.com/artanddesign/2019/may/12/lee-krasner-artist-formerly-known-as-mrs-jackson-pollock-barbican-exhibition" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/4LLt6NUNGoEU3DRc9" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="kline">
+  <div class="subhead">Kline Studio<br>32 East 10th Street</div>
+  <div class="body-copy">A CVS and a residential building on University Place in the East Village marks the site where the <u>Cedar Tavern</u> stood until 2006. But in the 1950s, the Cedar Tavern was the center of the Greenwich Village intelligentsia, a meeting place for Abstract Expressionist painters, folk singers, and the beatniks.<br><br>It was, in other words, the primary hangout for the avant-garde. Such was its reputation, that it formed the setting of Kurt Vonnegut’s 1987 novel Bluebeard, as the hub where his fictional hero Rabo Karebekian held court with his fellow painterly bohemians. The artist Elaine de Kooning, wife of Willem de Kooning, referred to it as the epicenter of a “decade-long bender” and, as recorded in David Lehman’s history of the period The Last Avant-Garde: The Making of the New York School of Poets, artist Ad Reinhardt said, “We go there to meet the very people we hate most, other painters.”</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <a href="https://www.nytimes.com/1986/01/19/arts/art-view-franz-kline-a-legacy-in-black-and-white.html" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/nWv1ShQZgApp9SWWA" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="studio35">
+  <div class="subhead">Studio 35,<br>52 West 8th Street</div>
+  <div class="body-copy">Hans Hofmann left not only a body of groundbreaking paintings, but also a legacy of students who became great Abstract Expressionist artists. Heather James Fine Art has opened The Hans Hofmann School, an exhibition featuring paintings by four of its namesake’s students: Michael Loew, Michael Goldberg, and John Little, and Michael Corrine West. The exhibition continues through June 30. The German-born artist was as prolific a teacher as he was a studio artist. He taught briefly at University of California, Berkeley; Chouinard Art Institute in Los Angeles; and the Art Students League of New York before starting the Hans Hofmann School of Fine Art in New York and Provincetown. The influential critic Clement Greenberg opined that Hofmann was “in all probability the most important art teacher of our time.” However, the artist closed the school in 1956 to focus on his own painting at the height of Abstract Expressionism. Hofmann, who was a generation older than his Ab Ex contemporaries, was 64 when Art of This Century in New York gave him his first solo exhibition in 1944.</div>
+  <!-- <div class="image-box">
+    <img src="images/lcg-5.png" class="sidebar-images">
+    <img src="images/lcg-2.jpg" class="sidebar-images">
+    <img src="images/lcg-1.jpg" class="sidebar-images">
+  </div> -->
+  <a href="https://www.artnews.com/art-news/news/hans-hofmann-paints-a-picture-2125/" target="blank"><div class="source"><b>↗</b> Learn More</div></a>
+  <a href="https://goo.gl/maps/dxUKNBE9cYMCacKd7" target="blank"><div class="source"><b>↗</b> Get Directions</div></a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
 
 
   <div class="title">The New York School</div>
@@ -259,7 +255,11 @@
 </div>
 <div id="haze"></div>
 <!-- <canvas id="paint"></canvas> -->
-<div class="info-popup">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div>
-<div class="modal"><!-- Place at bottom of page --></div>
+<!-- <div class="info-popup">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div> -->
+<!-- <svg id="arrow" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.19 76.14"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:6px;}</style></defs><line class="cls-1" x1="18" y1="3.07" x2="75.17" y2="3.07"/><line class="cls-1" x1="73.19" x2="73.19" y2="57.18"/><line class="cls-1" x1="72.66" y1="3.48" x2="2.12" y2="74.02"/></svg> -->
+
+</div>
+
+
 </body>
 </html>
