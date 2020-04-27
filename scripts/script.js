@@ -2,24 +2,40 @@
 $(document).ready(function () {
 
 // Page load fade in
-jQuery(function($){
-    $(document).ajaxSend(function() {
-        $(".loading").fadeIn(300);　
-    });
+// jQuery(function($){
+//     $(document).ajaxSend(function() {
+//         $(".loading").fadeIn(3000);　
+//     });
         
-    $('body').mouseenter(function(){
-        $.ajax({
-            type: 'GET',
-            success: function(data){
-                console.log(data);
-            }
-        }).done(function() {
-            setTimeout(function(){
-                $(".loading").fadeOut(300);
-            },500);
-        });
-    }); 
-});
+//     $('body').ready(function(){
+//         $.ajax({
+//             type: 'GET',
+//             success: function(data){
+//                 console.log(data);
+//             }
+//         }).done(function() {
+//             setTimeout(function(){
+//                 $(".loading").fadeOut(300);
+//             },500);
+//         });
+//     }); 
+// });
+
+$(document).ready(function(){
+  var load = anime({
+    targets:".loading",
+    left: '-100vw',
+    duration: '600ms',
+    delay: 1000,
+  })
+  var intro = anime({
+    targets:"#intro",
+    top: '28px',
+    duration: '60s',
+    delay: 1000,
+  })
+})
+
 
     // custom cursor
     var cursor = document.getElementById('cursor');
@@ -35,6 +51,37 @@ jQuery(function($){
     // homepage panning
     var scene = document.getElementById('container');
     var parallaxInstance = new Parallax(scene);
+
+
+  $('.source').mouseover(function(){
+      var load = anime({
+        targets:'#cursor',
+        rotate: '45deg',
+        width: 45,
+        duration: 1000,
+      })
+    })
+
+
+$('#intro').click(function(){
+  var load = anime({
+    targets:"#intro",
+    height: '30px',
+    duration: 1000,
+  })
+})
+
+$('#intro').mouseover(function(){
+  var expandIntro = anime({
+    targets:"#intro",
+    height: '305px'
+  })
+  var load = anime({
+    targets:"#cursor",
+    rotate: '45deg',
+    duration: 1000,
+  })
+})
 
     $('#image1').mouseover('click touchstart', function() {
         var caption = anime({
@@ -367,6 +414,106 @@ $('#image23').mouseleave('click touchstart', function() {
         duration: 600,
       })
 });
+$('#image24').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#kline-1',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image24').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#kline-1',
+        opacity: 0,
+        duration: 600,
+      })
+});
+
+$('#image25').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#kline-2',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image25').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#kline-2',
+        opacity: 0,
+        duration: 600,
+      })
+});
+
+$('#image26').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#krasner-1',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image26').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#krasner-1',
+        opacity: 0,
+        duration: 600,
+      })
+});
+$('#image27').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#krasner-2',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image27').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#krasner-2',
+        opacity: 0,
+        duration: 600,
+      })
+});
+$('#image28').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-1',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image28').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-1',
+        opacity: 0,
+        duration: 600,
+      })
+});
+$('#image29').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-2',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image29').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-2',
+        opacity: 0,
+        duration: 600,
+      })
+});
+$('#image30').mouseover('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-2',
+        opacity: 1,
+        duration: 600,
+      })
+});
+$('#image30').mouseleave('click touchstart', function() {
+  var caption = anime({
+        targets: '#studio35-2',
+        opacity: 0,
+        duration: 600,
+      })
+});
    
 
   $('#x, .overlay').click('click touchstart', function() {
@@ -400,7 +547,7 @@ $('.ues').mouseover('click touchstart', function() {
         duration: 600,
       })
       var caption = anime({
-        targets: '.right-header',
+        targets: '#intro',
         color: '#5482b4',
         duration: 600,
       })
@@ -419,7 +566,7 @@ $('.uws').mouseover('click touchstart', function() {
         duration: 600,
       })
       var caption = anime({
-        targets: '.right-header',
+        targets: '#intro',
         color: '#be4d4a',
         duration: 600,
       })
@@ -437,7 +584,7 @@ $('.midtown').mouseover('click touchstart', function() {
         duration: 600,
       })
       var caption = anime({
-        targets: '.right-header',
+        targets: '#intro',
         color: '#cb774f',
         duration: 600,
       })
@@ -455,7 +602,7 @@ $('.chelsea').mouseover('click touchstart', function() {
         duration: 600,
       })
       var caption = anime({
-        targets: '.right-header',
+        targets: '#intro',
         color: '#129AA0',
         duration: 600,
       })
@@ -490,8 +637,60 @@ $('.castelli').click('click touchstart', function() {
   })
 
   
+  $('.kline').click('click touchstart', function() {
+    var sidebar = anime({
+          targets: '#kline',
+          marginLeft: '0vw',
+          duration: 400,
+          easing: 'easeInOutExpo',
+        })
+      var cursorScale = anime({
+        targets: '#cursor',
+        rotate: '45deg',
+        scale: 2,
+      })
+      var closeSidebar = anime({
+        targets:'.close-sidebar',
+        left:'50vw'
+      })
+    })
 
     
+    $('.krasner').click('click touchstart', function() {
+      var sidebar = anime({
+            targets: '#krasner',
+            marginLeft: '0vw',
+            duration: 400,
+            easing: 'easeInOutExpo',
+          })
+        var cursorScale = anime({
+          targets: '#cursor',
+          rotate: '45deg',
+          scale: 2,
+        })
+        var closeSidebar = anime({
+          targets:'.close-sidebar',
+          left:'50vw'
+        })
+      })
+
+      $('.studio35').click('click touchstart', function() {
+        var sidebar = anime({
+              targets: '#studio35',
+              marginLeft: '0vw',
+              duration: 400,
+              easing: 'easeInOutExpo',
+            })
+          var cursorScale = anime({
+            targets: '#cursor',
+            rotate: '45deg',
+            scale: 2,
+          })
+          var closeSidebar = anime({
+            targets:'.close-sidebar',
+            left:'50vw'
+          })
+        })
 
 
     $('.rothko').click('click touchstart', function() {
@@ -760,7 +959,7 @@ var translateX = 0,
       translateZ = translateZ + stepZ;
     }
 
-    if (translateZ > 30){
+    if (translateZ > 40){
       return
     }
     if (-translateZ > 90){
@@ -769,6 +968,20 @@ var translateX = 0,
     console.log(translateZ)
     apply_coords();
   });
+
+
+
+
+  // var myVar;
+
+  // function myFunction() {
+  //   myVar = setTimeout(showPage, 3000);
+  // }
+  
+  // function showPage() {
+  //   document.getElementById("loading").style.display = "none";
+  //   // document.getElementById("body").style.display = "block";
+  // }
 
 
 
