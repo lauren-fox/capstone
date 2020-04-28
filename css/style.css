@@ -21,7 +21,7 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: black;
-  z-index: 1000000000;
+  z-index: 100000000000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -531,9 +531,9 @@ body{
 
 #learn{
   position: fixed;
-  top: 24px;
-  right: 20px;
-  width: 60px;
+  top: 26px;
+  right: 19px;
+  width: 40px;
   z-index: 10000000000;
 
 }
@@ -1079,7 +1079,7 @@ a{
   top: 17px;
   left: 0;
   z-index: 10000;
-  color: rgb(160, 160, 160);
+  color: #376ec0;
   font-family: 'StandardBook';
   font-size: 19px;
   line-height: 26px;
