@@ -649,7 +649,7 @@ a:visited{
 
 #expand{
   display: hidden;
-  background-color: whitesmoke;
+  background-color: white;
   display: none;
   width: 100vw;
   height: 100vh;
