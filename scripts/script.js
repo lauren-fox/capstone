@@ -63,24 +63,20 @@ $(document).ready(function(){
     })
 
 
-$('#intro').click(function(){
-  var load = anime({
-    targets:"#intro",
-    height: '30px',
-    duration: 1000,
-  })
-})
+// $('#intro').click(function(){
+//   var load = anime({
+//     targets:"#intro",
+//     height: '30px',
+//     duration: 1000,
+//   })
+// })
 
 $('#intro').mouseover(function(){
   var expandIntro = anime({
     targets:"#intro",
     height: '305px'
   })
-  var load = anime({
-    targets:"#cursor",
-    rotate: '45deg',
-    duration: 1000,
-  })
+
 })
 
     $('#image1').mouseover('click touchstart', function() {
@@ -538,17 +534,17 @@ $('#image30').mouseleave('click touchstart', function() {
 $('.ues').mouseover('click touchstart', function() {
   var caption = anime({
         targets: '.ues',
-        borderColor: '#5482b4',
+        borderColor: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '.image-caption',
-        color: '#5482b4',
+        color: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '#intro',
-        color: '#5482b4',
+        color: '#376ec0',
         duration: 600,
       })
 });
@@ -557,17 +553,17 @@ $('.ues').mouseover('click touchstart', function() {
 $('.uws').mouseover('click touchstart', function() {
   var caption = anime({
         targets: '.uws',
-        borderColor: '#be4d4a',
+        borderColor: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '.image-caption',
-        color: '#be4d4a',
+        color: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '#intro',
-        color: '#be4d4a',
+        color: '#376ec0',
         duration: 600,
       })
 });
@@ -575,17 +571,17 @@ $('.uws').mouseover('click touchstart', function() {
 $('.midtown').mouseover('click touchstart', function() {
   var caption = anime({
         targets: '.midtown',
-        borderColor: '#be4d4a',
+        borderColor: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '.image-caption',
-        color: '#cb774f',
+        color: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '#intro',
-        color: '#cb774f',
+        color: '#376ec0',
         duration: 600,
       })
 });
@@ -593,21 +589,61 @@ $('.midtown').mouseover('click touchstart', function() {
 $('.chelsea').mouseover('click touchstart', function() {
   var caption = anime({
         targets: '.chelsea',
-        borderColor: '#129AA0',
+        borderColor: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '.image-caption',
-        color: '#129AA0',
+        color: '#376ec0',
         duration: 600,
       })
       var caption = anime({
         targets: '#intro',
-        color: '#129AA0',
+        color: '#376ec0',
         duration: 600,
       })
 });
 
+$('#learn').click('click touchstart', function() {
+  var caption = anime({
+        targets: '.info',
+        scale: 1,
+        opacity: 1,
+        duration: 1200,
+        translateX: '-50%',
+        translateY: '-50%',
+      })
+    var haze = anime({
+      targets:'#haze-2',
+      scale: 1,
+    })
+    var haze = anime({
+      targets:'#cursor',
+      rotate: "45deg",
+      scale: 2,
+    })
+});
+
+$('#haze-2, .info').click('click touchstart', function() {
+  var caption = anime({
+        targets: '.info',
+        scale: 0,
+        opacity: 0,
+        duration: 1200,
+        translateX: '-50%',
+        translateY: '-50%',
+      })
+    var haze = anime({
+      targets:'#cursor',
+      scale: 2,
+      rotate: '0deg',
+    })
+    var haze = anime({
+      targets:'#haze-2',
+      scale: 0,
+    })
+
+});
 
 $(window).load(function() {
   var pageLoad = anime({
@@ -632,7 +668,9 @@ $('.castelli').click('click touchstart', function() {
     })
     var closeSidebar = anime({
       targets:'.close-sidebar',
-      left:'50vw'
+      left:'50vw',
+      easing: 'easeInOutQuad',
+          zIndex: 10000000000,
     })
   })
 
@@ -651,7 +689,9 @@ $('.castelli').click('click touchstart', function() {
       })
       var closeSidebar = anime({
         targets:'.close-sidebar',
-        left:'50vw'
+        left:'50vw',
+        easing: 'easeInOutQuad',
+          zIndex: 10000000000,
       })
     })
 
@@ -670,7 +710,10 @@ $('.castelli').click('click touchstart', function() {
         })
         var closeSidebar = anime({
           targets:'.close-sidebar',
-          left:'50vw'
+          left:'50vw',
+          easing: 'easeInOutQuad',
+          zIndex: 10000000000,
+
         })
       })
 
@@ -688,7 +731,10 @@ $('.castelli').click('click touchstart', function() {
           })
           var closeSidebar = anime({
             targets:'.close-sidebar',
-            left:'50vw'
+            left:'50vw',
+            easing: 'easeInOutQuad',
+            zIndex: 10000000000,
+
           })
         })
 
@@ -710,6 +756,8 @@ $('.castelli').click('click touchstart', function() {
           scale: 1,
           easing: 'easeInOutQuad',
           duration:200,
+          zIndex: 10000000000,
+
         })
       })
     
@@ -733,6 +781,7 @@ $('.castelli').click('click touchstart', function() {
               opacity: 0.85,
               easing: 'easeInOutQuad',
               duration:200,
+              zIndex: 10000000000,
             })
           })
         
@@ -756,6 +805,8 @@ $('.castelli').click('click touchstart', function() {
                   opacity: 0.85,
                   easing: 'easeInOutQuad',
                   duration:200,
+                  zIndex: 10000000000,
+
                 })
               })
             
@@ -778,6 +829,8 @@ $('.castelli').click('click touchstart', function() {
                       opacity: 0.85,
                       easing: 'easeInOutQuad',
                       duration:200,
+                      zIndex: 10000000000,
+
                     })
                   })
                 
@@ -796,6 +849,8 @@ $('.castelli').click('click touchstart', function() {
                             opacity: 0.85,
                             easing: 'easeInOutQuad',
                             duration:200,
+                            zIndex: 10000000000,
+
                           })
                         var cursorScale = anime({
                           targets: '#cursor',
@@ -819,6 +874,9 @@ $('.castelli').click('click touchstart', function() {
                                 opacity: 0.85,
                                 easing: 'easeInOutQuad',
                                 duration:200,
+                                duration:200,
+                                zIndex: 10000000000,
+
                               })
                             var cursorScale = anime({
                               targets: '#cursor',
@@ -840,6 +898,8 @@ $('.castelli').click('click touchstart', function() {
                                 opacity: 0.85,
                                 easing: 'easeInOutQuad',
                                 duration:200,
+                                zIndex: 10000000000,
+
                               })
                               var cursorScale = anime({
                                 targets: '#cursor',
@@ -857,38 +917,37 @@ $('.castelli').click('click touchstart', function() {
                                   })
                                 var sidebar = anime({
                                   targets:'.close-sidebar',
-                                  scale: 0,
-                                  opacity: 0,
+                                  zIndex: 0,
                                 })
                                 var cursorScale = anime({
                                   targets: '#cursor',
                                   rotate: '0deg',
-                                  scale: 1,
+                                  scale: 2,
                                 })
                               })
 
 
-$('#info-button').click('click touchstart', function() {
-   var sidebar = anime({
-      targets: '.info-popup',
-      translateX:'-50%',
-       translateY:'-50%',
-       opacity: 1,
-       scale: 1,
-       duration: 400,
-       easing: 'easeInOutExpo',
-      })
-    var haze = anime({
-      targets:'#haze',
-      scale: 1,
-      opacity: '0.85',
-    })
-    var cursorScale = anime({
-      targets: '#cursor',
-      rotate: '45deg',
-      scale: 2,
-      })
-})
+// $(document).load('click touchstart', function() {
+//    var sidebar = anime({
+//       targets: '#about',
+//       translateX:'-50%',
+//        translateY:'-50%',
+//        opacity: 1,
+//        scale: 1,
+//        duration: 400,
+//        easing: 'easeInOutExpo',
+//       })
+//     var haze = anime({
+//       targets:'#haze',
+//       scale: 1,
+//       opacity: '0.85',
+//     })
+//     var cursorScale = anime({
+//       targets: '#cursor',
+//       rotate: '45deg',
+//       scale: 2,
+//       })
+// })
 
 $('#haze').click('click touchstart', function() {
   var sidebar = anime({
@@ -969,8 +1028,20 @@ var translateX = 0,
     apply_coords();
   });
 
-
-
+  $('#learn').mouseover('click touchstart', function() {
+    var sidebar = anime({
+       targets: '#cursor',
+        scale: '2',
+        duration: 100,
+       })
+  })
+  $('#learn').mouseleave('click touchstart', function() {
+    var sidebar = anime({
+       targets: '#cursor',
+        scale: '1',
+        duration: 100,
+       })
+  })
 
   // var myVar;
 
