@@ -624,9 +624,52 @@ $('#learn').click('click touchstart', function() {
     })
 });
 
+$('#colophon').click('click touchstart', function() {
+  var caption = anime({
+        targets: '.colophon',
+        scale: 1,
+        opacity: 1,
+        duration: 1200,
+        translateX: '-50%',
+        translateY: '-50%',
+      })
+    var haze = anime({
+      targets:'#haze-2',
+      scale: 1,
+    })
+    var haze = anime({
+      targets:'#cursor',
+      rotate: "45deg",
+      scale: 2,
+    })
+});
+
+
+
 $('#haze-2, .info').click('click touchstart', function() {
   var caption = anime({
         targets: '.info',
+        scale: 0,
+        opacity: 0,
+        duration: 1200,
+        translateX: '-50%',
+        translateY: '-50%',
+      })
+    var haze = anime({
+      targets:'#cursor',
+      scale: 2,
+      rotate: '0deg',
+    })
+    var haze = anime({
+      targets:'#haze-2',
+      scale: 0,
+    })
+
+});
+
+$('#haze-2, .colophon').click('click touchstart', function() {
+  var caption = anime({
+        targets: '.colophon',
         scale: 0,
         opacity: 0,
         duration: 1200,
