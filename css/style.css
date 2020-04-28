@@ -15,6 +15,7 @@ body{
   position: relative;
   height: 100vh;
   width: 100vw;
+  cursor: none;
 }
 
 .loading{
@@ -493,7 +494,7 @@ body{
 }
 
 #image21{
-  top: 1650px;
+  top: 1550px;
   left: 750px;
   height: 170px;
   width: 260px;
@@ -609,8 +610,8 @@ body{
 
 
 ::selection {
-  background-color:rgb(255, 90, 68);
-  color: black;
+  background-color:rgb(216, 216, 216);
+  color: #376ec0;
 }
 /* 
 .body-text{
@@ -648,7 +649,7 @@ a:visited{
 
 #expand{
   display: hidden;
-  background-color: white;
+  background-color: whitesmoke;
   display: none;
   width: 100vw;
   height: 100vh;
@@ -1061,7 +1062,7 @@ a{
   width: 98vw;
   height: auto;
   position: fixed;
-  top: 17px;
+  top: 28px;
   left: 0;
   z-index: 10000;
   color: #376ec0;
