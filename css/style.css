@@ -991,6 +991,7 @@ a{
   padding-bottom: 4px;
   padding-top: 4px;
   padding-left: 8px;
+  text-decoration: none;
 }
 
 .source:hover{
@@ -1019,7 +1020,6 @@ a{
   width: 45vw;
   line-height: 26px;
   padding-bottom: 6px;
-  text-decoration: underline;
 }
 
 .top-link{
@@ -1196,7 +1196,18 @@ hr{
   font-size: 14px;
   line-height: 23px;
   color: #376ec0;
-  padding-top: 70px;
+  padding-top: 30px;
+}
+
+.citation-side{
+  width: 45vw;
+  font-family: 'StandardBook';
+  font-size: 14px;
+  line-height: 23px;
+  color: #376ec0;
+  padding-top: 5px;
+  margin-left: 20px;
+  padding-bottom: 40px;
 }
 
 #colophon{
