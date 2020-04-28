@@ -459,7 +459,7 @@ body{
   position: fixed;
   z-index: 1000 !important;
   color: black;
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   bottom: 36px;
   opacity: 0;
@@ -531,12 +531,22 @@ body{
 
 
 @font-face {
-  font-family: 'F grotesk book';
-  src: url('../fonts/F-Grotesk-Book.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'StandardBook';
+  src: url(../fonts/standard-book-webfont.woff);
+}
+@font-face {
+  font-family: 'StandardBook-Italic';
+  src: url(../fonts/standard-book-italic-webfont.woff);
 }
 
+@font-face {
+  font-family: 'StandardBold';
+  src: url(../fonts/standard-bold-webfont.woff);
+}
+@font-face {
+  font-family: 'StandardBold-Italic';
+  src: url(../fonts/standard-bold-italic-webfont.woff);
+}
 
 #cursor{
     width: 25px;
@@ -592,7 +602,7 @@ body{
   background-color:rgb(255, 90, 68);
   color: black;
 }
-
+/* 
 .body-text{
   width: 90vw;
   height: 5vh;
@@ -607,7 +617,7 @@ body{
   line-height: 3rem;
   hyphens: auto;
   z-index: 1;
-}
+} */
 
 .link-container{
   width: auto;
@@ -690,7 +700,7 @@ a:visited{
 #header{
   width: 100vw;
   height: auto;
-  font-family: "F grotesk demi";
+  font-family: 'StandardBook';
   font-weight: 700;
   font-size: 12px;
   position: fixed;
@@ -844,7 +854,7 @@ a:visited{
 }
 
 .return{
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   position: static;
   margin-top: 15px;
@@ -864,7 +874,7 @@ a:visited{
   transform: rotate(90deg);
   height: 25px;
   width: 100vh;
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 21px;
   color: rgb(131, 131, 131);
   position: absolute;
@@ -911,7 +921,7 @@ a{
   background-color: white;
   box-shadow: 2px 5px 40px -3px  #cb774f;
   z-index: 90000;
-  font-family: 'SuisseWorks-Regular';
+  font-family: 'StandardBook';
   font-size: 19px;
   color: #be4d4a;
   text-align: center;
@@ -960,11 +970,11 @@ a{
 }
 
 .source{
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   margin-top: 3px;
   margin-left:13px;
-  width: 150px;
+  width: 170px;
   line-height: 20px;
   padding-bottom: 4px;
   padding-top: 4px;
@@ -976,7 +986,7 @@ a{
 }
 
 .body-copy{
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   position: static;
   margin-top: 26px;
@@ -987,7 +997,7 @@ a{
 }
 
 .subhead{
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   position: absolute;
   bottom: 17px;
   font-size: 19px;
@@ -1044,7 +1054,7 @@ a{
   left: 0;
   z-index: 10000;
   color: rgb(160, 160, 160);
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   line-height: 26px;
   text-align: center;
@@ -1084,7 +1094,7 @@ hr{
   background-color: white;
   color: #be4d4a;
   z-index: 1000000;
-  font-family: 'F Grotesk book';
+  font-family: 'StandardBook';
   font-size: 19px;
   line-height: 26px;
   padding-left: 20px;
