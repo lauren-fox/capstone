@@ -35,9 +35,9 @@ body{
   position: fixed;
   top: 0;
   left: 50vw;
-  transform: scale(0);
+  transform: scale(1);
   bottom: 0;
-  z-index: 10000;
+  z-index: 0;
   opacity: 0;
 }
 
@@ -117,8 +117,8 @@ body{
 .image:hover{
   z-index: 1000;
   transition-timing-function: ease-in-out;
-  border: 4px solid transparent;
-  box-shadow: 2px 5px 8px -3px  #8d8d8d;
+  border: 5px solid transparent;
+  box-shadow: 2px 4px 8px -3px  #8d8d8d;
 
 }
 
@@ -529,6 +529,15 @@ body{
   height: calc(170px * 1.6);
 }
 
+#learn{
+  position: fixed;
+  top: 24px;
+  right: 20px;
+  width: 60px;
+  z-index: 10000000000;
+
+}
+
 
 @font-face {
   font-family: 'StandardBook';
@@ -555,6 +564,7 @@ body{
     position: absolute;
     z-index: 10000000;
     pointer-events: none;
+    transform: scale(2);
 }
 
 .title{
@@ -657,7 +667,7 @@ a:visited{
   font-size: 40px;
   z-index: 100000005;
   opacity: 0;
-  color: #be4d4a;
+  color: #376ec0;
   margin-left: 50%;
   margin-top: 50%;
   transform: translate(-50%, -50%);
@@ -675,7 +685,7 @@ a:visited{
   font-size: 190px;
   z-index: 100000005;
   opacity: 0;
-  color: #be4d4a;
+  color: #dd9e14;
   position: fixed;
   top: 0;
   right: 0;
@@ -692,12 +702,12 @@ a:visited{
     opacity: 1;
   }
   .right-header{
-    color:#be4d4a;
+    color:#376ec0;
     z-index: 10000000000;
   }
 }
 
-#header{
+/* #header{
   width: 100vw;
   height: auto;
   font-family: 'StandardBook';
@@ -707,7 +717,7 @@ a:visited{
   top: 17px;
   text-align: center;
   color: #0a0dc4;
-}
+} */
 
 
 
@@ -751,106 +761,106 @@ a:visited{
 }
 
 #kline.sidebar{
-  color: #129AA0;
+  color: #376ec0;
 }
 
 #leo-castelli.sidebar{
-  color:#5482b4;
+  color:#376ec0;
 }
 #leo-castelli a{
-  color:#5482b4;
+  color:#376ec0;
 }
 #leo-castelli.get-directions{
-  border:1px solid #5482b4;
+  border:1px solid #376ec0;
 }
 
 #krasner.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
-  color:#129AA0;
+  color:#376ec0;
 }
 #krasner a{
-  color:#129AA0;
+  color:#376ec0;
 }
 #krasner.get-directions{
-  border:1px solid #129AA0;
+  border:1px solid #376ec0;
 }
 
 #studio35.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
-  color:#129AA0;
+  color:#376ec0;
 }
 #studio35 a{
-  color:#129AA0;
+  color:#376ec0;
 }
 #studio35.get-directions{
-  border:1px solid #129AA0;
+  border:1px solid #376ec0;
 }
 
 #mark-rothko a{
-  color:#5482b4;
+  color:#376ec0;
 }
 #mark-rothko.get-directions{
-  border:1px solid #5482b4;
+  border:1px solid #376ec0;
 }
 
 #tavern a{
-  color:#129AA0;
+  color:#376ec0;
 }
 #tavern.get-directions{
-  border:1px solid #129AA0;
+  border:1px solid #376ec0;
 }
 #de-kooning a{
-  color:#129AA0;
+  color:#376ec0;
 }
 #de-kooning.get-directions{
-  border:1px solid #129AA0;
+  border:1px solid #376ec0;
 }
 
 
 #mark-rothko.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
   overflow: scroll;
-  color:#5482b4;
+  color:#376ec0;
 }
 
 #betty-parsons a{
-  color:#be4d4a;
+  color:#376ec0;
 }
 #betty-parsons.get-directions{
-  border:1px solid #be4d4a;
+  border:1px solid #376ec0;
 }
 
 #kline a{
-  color:#129AA0;
+  color:#376ec0;
 }
 #moma a{
-  color:#be4d4a;
+  color:#376ec0;
 }
 
 #janis-gallery a{
-  color:#be4d4a;
+  color:#376ec0;
 }
 
 #century-gallery a{
-  color:#be4d4a;
+  color:#376ec0;
 }
 #century-gallery.get-directions{
-  border:1px solid #be4d4a;
+  border:1px solid #376ec0;
 }
 
 #tavern.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
-  color:#129AA0;
+  color:#376ec0;
 }
 
 #de-kooning.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
-  color:#129AA0;
+  color:#376ec0;
 }
 
 #betty-parsons.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
-  color:#be4d4a;
+  color:#376ec0;
 }
 
 .return{
@@ -864,7 +874,7 @@ a:visited{
 }
 
 /* .return:hover{
-  border-bottom: 2px solid #5482b4;
+  border-bottom: 2px solid #376ec0;
 } */
 
 
@@ -885,20 +895,20 @@ a:visited{
 }
 
 #betty-parsons.sidebar{
-  color: #be4d4a;
+  color: #376ec0;
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
 }
 
 #century-gallery.sidebar{
-  color: #be4d4a;
+  color: #376ec0;
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
 }
 #janis-gallery.sidebar{
-  color: #be4d4a;
+  color: #376ec0;
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
 }
 #moma.sidebar{
-  color: #be4d4a;
+  color: #376ec0;
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
 }
 
@@ -919,11 +929,11 @@ a{
   transform: translate(-50%, -50%);
   transform: scale(0);
   background-color: white;
-  box-shadow: 2px 5px 40px -3px  #cb774f;
+  box-shadow: 2px 5px 40px -3px  #376ec0;
   z-index: 90000;
   font-family: 'StandardBook';
   font-size: 19px;
-  color: #be4d4a;
+  color: #376ec0;
   text-align: center;
   padding: 50px;
   margin-top: auto;
@@ -935,14 +945,30 @@ a{
   height: 100vh;
   background-color: white;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top:0;
   left: 0;
+  bottom:0;
+  right: 0;
   transform: scale(0);
 }
 
+#haze-2{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 0;
+  position: fixed;
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  transform: scale(0);
+  z-index: 100000000000;
+}
+
 #kline{
-  color: #be4d4a;
+  color: #376ec0;
 }
 
 
@@ -1058,6 +1084,7 @@ a{
   font-size: 19px;
   line-height: 26px;
   text-align: center;
+  z-index: 100;
 }
 
 #x{
@@ -1092,7 +1119,7 @@ hr{
   margin-top: 50%;
   margin-left: 50%;
   background-color: white;
-  color: #be4d4a;
+  color: #376ec0;
   z-index: 1000000;
   font-family: 'StandardBook';
   font-size: 19px;
@@ -1102,6 +1129,60 @@ hr{
   padding-right: 50px;
   padding-bottom: 18px;
   text-align: left;
-  border: solid 4px #be4d4a;
+  border: solid 4px #376ec0;
   transform: translate(0%, 0%);
+}
+
+/*  */
+
+
+
+.info-title{
+  height: 25px;
+  width: 40vw;
+  font-family: 'StandardBook';
+  font-size: 25px;
+  color: #376ec0;
+  z-index: 100000000;
+  padding-bottom: 20px;
+  margin-top: 17px;
+  margin-left: 0;
+  /* text-decoration: underline; */
+  text-align: center;
+}
+
+.info{
+    width: 43vw;
+    height: auto;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(50%,50%) scale(1);
+    padding-bottom: 40px;
+    padding-left: 40px;
+    z-index: 10000000;
+    overflow: hidden scroll;
+    box-shadow: 2px 5px 8px -3px  #8d8d8d;
+
+}
+.info-body{
+    width: 40vw;
+    font-family: 'StandardBook';
+    font-size: 19px;
+    margin-top: 30px;
+    line-height: 26px;
+    color: #376ec0;
+    overflow-y: scroll;
+
+}
+
+.citation{
+  width: 45vw;
+  font-family: 'StandardBook';
+  font-size: 14px;
+  line-height: 23px;
+  color: #376ec0;
+  padding-top: 70px;
 }
