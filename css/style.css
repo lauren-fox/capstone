@@ -562,7 +562,7 @@ body{
     height: 25px;
     border-radius: 100%;
     position: absolute;
-    z-index: 10000000;
+    z-index: 100000000000000000;
     pointer-events: none;
     transform: scale(2);
 }
@@ -648,48 +648,33 @@ a:visited{
 
 #expand{
   display: hidden;
-  background-color: white;
+  background-color: whitesmoke;
   display: none;
   width: 100vw;
   height: 100vh;
-  z-index: 10003;
+  z-index: 10000003;
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(../images/arrow-02.png);
-  background-size: 400px;
+  background-image: url(../images/arrow-2-02.png);
+  background-size: 100vw;
   background-repeat: no-repeat;
-  background-position-x: 55vw;
-  background-position-y: 55vh;
 }
 
 #expand-text{
-  font-size: 40px;
+  font-size: 19px;
+  font-family: StandardBook;
   z-index: 100000005;
   opacity: 0;
   color: #376ec0;
-  margin-left: 50%;
-  margin-top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100vw;
+  position: absolute;
+  bottom: 36px;
+  left: 0;
   text-align: center;
 }
 
-.arrow{
-  width: 50vw;
-}
 
-#expand-arrow{
-  width: 100vw;
-  height: 100vh;
-  font-family: 'SuisseWorks-Regular';
-  font-size: 190px;
-  z-index: 100000005;
-  opacity: 0;
-  color: #dd9e14;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
 
 @media screen and (max-width: 1000px) {
   #expand {
