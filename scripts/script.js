@@ -28,12 +28,6 @@ $(document).ready(function(){
     duration: '600ms',
     delay: 1000,
   })
-  var intro = anime({
-    targets:"#intro",
-    top: '28px',
-    duration: '60s',
-    delay: 1000,
-  })
 })
 
 
@@ -63,13 +57,13 @@ $(document).ready(function(){
     })
 
 
-// $('#intro').click(function(){
-//   var load = anime({
-//     targets:"#intro",
-//     height: '30px',
-//     duration: 1000,
-//   })
-// })
+$('#intro').click(function(){
+  var load = anime({
+    targets:"#intro",
+    height: '30px',
+    duration: 1000,
+  })
+})
 
 $('#intro').mouseover(function(){
   var expandIntro = anime({
@@ -609,9 +603,11 @@ $('#learn').click('click touchstart', function() {
         targets: '.info',
         scale: 1,
         opacity: 1,
-        duration: 1200,
+        duration: 600,
         translateX: '-50%',
         translateY: '-50%',
+        easing: 'easeInOutExpo',
+
       })
     var haze = anime({
       targets:'#haze-2',
@@ -629,9 +625,11 @@ $('#colophon').click('click touchstart', function() {
         targets: '.colophon',
         scale: 1,
         opacity: 1,
-        duration: 1200,
+        duration: 600,
         translateX: '-50%',
         translateY: '-50%',
+        easing: 'easeInOutExpo',
+
       })
     var haze = anime({
       targets:'#haze-2',
@@ -651,7 +649,7 @@ $('#haze-2, .info').click('click touchstart', function() {
         targets: '.info',
         scale: 0,
         opacity: 0,
-        duration: 1200,
+        duration: 600,
         translateX: '-50%',
         translateY: '-50%',
       })
@@ -672,7 +670,7 @@ $('#haze-2, .colophon').click('click touchstart', function() {
         targets: '.colophon',
         scale: 0,
         opacity: 0,
-        duration: 1200,
+        duration: 600,
         translateX: '-50%',
         translateY: '-50%',
       })
@@ -1081,7 +1079,7 @@ var translateX = 0,
   $('#learn').mouseleave('click touchstart', function() {
     var sidebar = anime({
        targets: '#cursor',
-        scale: '1',
+        scale: '2',
         duration: 100,
        })
   })
