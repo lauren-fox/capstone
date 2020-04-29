@@ -1,1101 +1,220 @@
+<!DOCTYPE HTML>
+<html>
 
-$(document).ready(function () {
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="scripts/script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></head>
+  <title>The New York School</title>
+<body>
+<div class="close-sidebar"></div>
 
-// Page load fade in
-// jQuery(function($){
-//     $(document).ajaxSend(function() {
-//         $(".loading").fadeIn(3000);　
-//     });
-        
-//     $('body').ready(function(){
-//         $.ajax({
-//             type: 'GET',
-//             success: function(data){
-//                 console.log(data);
-//             }
-//         }).done(function() {
-//             setTimeout(function(){
-//                 $(".loading").fadeOut(300);
-//             },500);
-//         });
-//     }); 
-// });
+<div class='loading'></div>
 
-$(document).ready(function(){
-  var load = anime({
-    targets:".loading",
-    left: '-100vw',
-    duration: '600ms',
-    delay: 1000,
-  })
-})
+<div id="intro">The New York School</div>
+<div id="background"></div>
+<img id="learn" src="../images/learn-01.png">
+<img id="colophon" src="../images/info-01.png">
+<div class="image-caption" id="castelli-3">Leo Castelli Gallery, 8 East 77th Street</div>
+  <div class="image-caption" id="rothko-1">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="rothko-2">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="rothko-3">Mark Rothko's Studio, 157 East 69th Street</div>
+  <div class="image-caption" id="parsons-1">Betty Parsons Gallery, 15 West 57th Street</div>
+  <div class="image-caption" id="parsons-2">Betty Parsons Gallery, 15 West 57th Street</div>
+  <div class="image-caption" id="art-of-this-century-1">Art of this Century Gallery, 30 West 57th Street</div>
+  <div class="image-caption" id="art-of-this-century-2">Art of this Century Gallery, 30 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-1">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-2">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="sidney-janis-3">Sidney Janis Gallery, 110 West 57th Street</div>
+  <div class="image-caption" id="moma-1">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-2">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-3">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="moma-4">Museum of Modern Art, 11 West 53rd Street</div>
+  <div class="image-caption" id="de-kooning-1">De Kooning Studio, 156 West 22nd Street</div>
+  <div class="image-caption" id="de-kooning-2">De Kooning Studio, 156 West 22nd Street</div>
+  <div class="image-caption" id="tavern-1">Cedar Tavern, 82 University Place</div>
+  <div class="image-caption" id="tavern-2">Cedar Tavern, 82 University Place</div>
+  <div class="image-caption" id="tavern-3">Cedar Tavern, 82 University Place</div>
+  <div class="image-caption" id="kline-1">Franz Kline's Studio, 32 East 10th Street</div>
+  <div class="image-caption" id="kline-2">Franz Kline's Studio, 32 East 10th Street</div>
+  <div class="image-caption" id="krasner-1">Lee Krasner and Jackson Pollock's Studio, 46 East 8th Street</div>
+  <div class="image-caption" id="krasner-2">Lee Krasner and Jackson Pollock's Studio, 46 East 8th Street</div>
+  <div class="image-caption" id="studio35-1">The Hans Hofmann School of Fine Arts, 52 West 8th Street</div>
+  <div class="image-caption" id="studio35-2">The Hans Hofmann School of Fine Arts, 52 West 8th Street</div>
 
+  <div class="info">
+  <!-- <div class="info-title">What is the<br>New York School?</div> -->
+  <div class="info-body">The New York School was an informal group of vanguard artists that were active in the 1950s and 1960s in New York City. Mark Rothko, Willem de Kooning and Jackson Pollock were at the center of the New York School and are just some of the artists that helped define New York City as the center of the art world. Their work introduced bold new innovations in form and content reflected a desire to embrace self expression and spontaneity. Explore the locations that were home to New York School to learn how the movement unfolded in New York City.<sup>1</sup></div>
+  <div class="citation"><sup>1</sup> <i>The New York School.</i> Artsy.</div>
+  </div>
 
-    // custom cursor
-    var cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', function (e) {
-        var x = e.pageX;
-        var y = e.pageY;
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
-    });
-
-    
-
-    // homepage panning
-    var scene = document.getElementById('container');
-    var parallaxInstance = new Parallax(scene);
-
-
-  $('.source').mouseover(function(){
-      var load = anime({
-        targets:'#cursor',
-        rotate: '45deg',
-        width: 45,
-        duration: 1000,
-      })
-    })
-
-
-$('#intro').click(function(){
-  var load = anime({
-    targets:"#intro",
-    height: '30px',
-    duration: 1000,
-  })
-})
-
-$('#intro').mouseover(function(){
-  var expandIntro = anime({
-    targets:"#intro",
-    height: '5px'
-  })
-
-})
-
-    $('#image1').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image1').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image2').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image2').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image3').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-3',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image3').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#castelli-3',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image10').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image10').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image11').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image11').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image12').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-3',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image12').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#rothko-3',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-
-
-    $('#image5').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#art-of-this-century-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image5').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#art-of-this-century-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image6').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#art-of-this-century-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image6').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#art-of-this-century-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-
-
-
-
-
-    $('#image7').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image7').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image8').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image8').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image9').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-3',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image9').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#sidney-janis-3',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-
-
-
-
-
-
-    $('#image14').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#parsons-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image14').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#parsons-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image15').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#parsons-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image15').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#parsons-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-
-
-
-
-
-    $('#image13').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-1',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image13').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-1',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image16').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-2',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image16').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-2',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image17').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-3',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image17').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-3',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-    $('#image18').mouseover('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-4',
-              opacity: 1,
-              duration: 600,
-            })
-    });
-    $('#image18').mouseleave('click touchstart', function() {
-        var caption = anime({
-              targets: '#moma-4',
-              opacity: 0,
-              duration: 600,
-            })
-    });
-
-    $('#image19').mouseover('click touchstart', function() {
-      var caption = anime({
-            targets: '#de-kooning-1',
-            opacity: 1,
-            duration: 600,
-          })
-  });
-  $('#image19').mouseleave('click touchstart', function() {
-      var caption = anime({
-            targets: '#de-kooning-1',
-            opacity: 0,
-            duration: 600,
-          })
-  });
-
-  $('#image20').mouseover('click touchstart', function() {
-    var caption = anime({
-          targets: '#de-kooning-1',
-          opacity: 1,
-          duration: 600,
-        })
-});
-$('#image20').mouseleave('click touchstart', function() {
-    var caption = anime({
-          targets: '#de-kooning-1',
-          opacity: 0,
-          duration: 600,
-        })
-});
-
-
-$('#image21').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-1',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image21').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-1',
-        opacity: 0,
-        duration: 600,
-      })
-});
-
-$('#image22').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-2',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image22').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-2',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image23').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-3',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image23').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#tavern-3',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image24').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#kline-1',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image24').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#kline-1',
-        opacity: 0,
-        duration: 600,
-      })
-});
-
-$('#image25').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#kline-2',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image25').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#kline-2',
-        opacity: 0,
-        duration: 600,
-      })
-});
-
-$('#image26').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#krasner-1',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image26').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#krasner-1',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image27').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#krasner-2',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image27').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#krasner-2',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image28').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-1',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image28').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-1',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image29').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-2',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image29').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-2',
-        opacity: 0,
-        duration: 600,
-      })
-});
-$('#image30').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-2',
-        opacity: 1,
-        duration: 600,
-      })
-});
-$('#image30').mouseleave('click touchstart', function() {
-  var caption = anime({
-        targets: '#studio35-2',
-        opacity: 0,
-        duration: 600,
-      })
-});
-   
-
-  $('#x, .overlay').click('click touchstart', function() {
-      var caption = anime({
-            targets: '.intro, .overlay, #x',
-            top: -3000,
-            opacity:0,
-            duration: 6000,
-          })
-  });
-
-
-  $('.right').mouseover('click touchstart', function() {
-    var caption = anime({
-          targets: '#cursor',
-          width: 500,
-          duration: 600,
-        })
-});
-
-
-$('.ues').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '.ues',
-        borderColor: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '.image-caption',
-        color: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '#intro',
-        color: '#376ec0',
-        duration: 600,
-      })
-});
-
-
-$('.uws').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '.uws',
-        borderColor: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '.image-caption',
-        color: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '#intro',
-        color: '#376ec0',
-        duration: 600,
-      })
-});
-
-$('.midtown').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '.midtown',
-        borderColor: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '.image-caption',
-        color: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '#intro',
-        color: '#376ec0',
-        duration: 600,
-      })
-});
-
-$('.chelsea').mouseover('click touchstart', function() {
-  var caption = anime({
-        targets: '.chelsea',
-        borderColor: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '.image-caption',
-        color: '#376ec0',
-        duration: 600,
-      })
-      var caption = anime({
-        targets: '#intro',
-        color: '#376ec0',
-        duration: 600,
-      })
-});
-
-$('#learn').click('click touchstart', function() {
-  var caption = anime({
-        targets: '.info',
-        scale: 1,
-        opacity: 1,
-        duration: 600,
-        translateX: '-50%',
-        translateY: '-50%',
-        easing: 'easeInOutExpo',
-
-      })
-    var haze = anime({
-      targets:'#haze-2',
-      scale: 1,
-    })
-    var haze = anime({
-      targets:'#cursor',
-      rotate: "45deg",
-      scale: 2,
-    })
-});
-
-$('#colophon').click('click touchstart', function() {
-  var caption = anime({
-        targets: '.colophon',
-        scale: 1,
-        opacity: 1,
-        duration: 600,
-        translateX: '-50%',
-        translateY: '-50%',
-        easing: 'easeInOutExpo',
-
-      })
-    var haze = anime({
-      targets:'#haze-2',
-      scale: 1,
-    })
-    var haze = anime({
-      targets:'#cursor',
-      rotate: "45deg",
-      scale: 2,
-    })
-});
-
-
-
-$('#haze-2, .info').click('click touchstart', function() {
-  var caption = anime({
-        targets: '.info',
-        scale: 0,
-        opacity: 0,
-        duration: 600,
-        translateX: '-50%',
-        translateY: '-50%',
-      })
-    var haze = anime({
-      targets:'#cursor',
-      scale: 2,
-      rotate: '0deg',
-    })
-    var haze = anime({
-      targets:'#haze-2',
-      scale: 0,
-    })
-
-});
-
-$('#haze-2, .colophon').click('click touchstart', function() {
-  var caption = anime({
-        targets: '.colophon',
-        scale: 0,
-        opacity: 0,
-        duration: 600,
-        translateX: '-50%',
-        translateY: '-50%',
-      })
-    var haze = anime({
-      targets:'#cursor',
-      scale: 2,
-      rotate: '0deg',
-    })
-    var haze = anime({
-      targets:'#haze-2',
-      scale: 0,
-    })
-
-});
-
-$(window).load(function() {
-  var pageLoad = anime({
-    targets: '.image',
-    scale: 1.05,
-    opacity: 1,
-    duration: 10000,
-  })
-});
-
-$('.castelli').click('click touchstart', function() {
-  var sidebar = anime({
-        targets: '#leo-castelli',
-        marginLeft: '0vw',
-        duration: 400,
-        easing: 'easeInOutExpo',
-      })
-    var cursorScale = anime({
-      targets: '#cursor',
-      rotate: '45deg',
-      scale: 2,
-    })
-    var closeSidebar = anime({
-      targets:'.close-sidebar',
-      left:'50vw',
-      easing: 'easeInOutQuad',
-          zIndex: 10000000000,
-    })
-  })
-
+  <div class="colophon">
+    <!-- <div class="info-title">What is the<br>New York School?</div> -->
+    <div class="info-body">This website was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for their help and support along the way. The typography throughout the site is Standard by Berthold Type.</div>
+    </div>
   
-  $('.kline').click('click touchstart', function() {
-    var sidebar = anime({
-          targets: '#kline',
-          marginLeft: '0vw',
-          duration: 400,
-          easing: 'easeInOutExpo',
-        })
-      var cursorScale = anime({
-        targets: '#cursor',
-        rotate: '45deg',
-        scale: 2,
-      })
-      var closeSidebar = anime({
-        targets:'.close-sidebar',
-        left:'50vw',
-        easing: 'easeInOutQuad',
-          zIndex: 10000000000,
-      })
-    })
-
-    
-    $('.krasner').click('click touchstart', function() {
-      var sidebar = anime({
-            targets: '#krasner',
-            marginLeft: '0vw',
-            duration: 400,
-            easing: 'easeInOutExpo',
-          })
-        var cursorScale = anime({
-          targets: '#cursor',
-          rotate: '45deg',
-          scale: 2,
-        })
-        var closeSidebar = anime({
-          targets:'.close-sidebar',
-          left:'50vw',
-          easing: 'easeInOutQuad',
-          zIndex: 10000000000,
-
-        })
-      })
-
-      $('.studio35').click('click touchstart', function() {
-        var sidebar = anime({
-              targets: '#studio35',
-              marginLeft: '0vw',
-              duration: 400,
-              easing: 'easeInOutExpo',
-            })
-          var cursorScale = anime({
-            targets: '#cursor',
-            rotate: '45deg',
-            scale: 2,
-          })
-          var closeSidebar = anime({
-            targets:'.close-sidebar',
-            left:'50vw',
-            easing: 'easeInOutQuad',
-            zIndex: 10000000000,
-
-          })
-        })
 
 
-    $('.rothko').click('click touchstart', function() {
-      var sidebar = anime({
-            targets: '#mark-rothko',
-            marginLeft: '0vw',
-            duration: 400,
-            easing: 'easeInOutExpo',
-          })
-        var cursorScale = anime({
-          targets: '#cursor',
-          rotate: '45deg',
-          scale: 2,
-        })
-        var closeSidebar = anime({
-          targets:'.close-sidebar',
-          scale: 1,
-          easing: 'easeInOutQuad',
-          duration:200,
-          zIndex: 10000000000,
+<div id="expand">
+  <div id="expand-text">Oops! Expand your browser to keep exploring.</div>
+    <!-- <img id="arrow-2" src="../images/arrow.png"> -->
+</div>
 
-        })
-      })
-    
-      
+  <div id="container"
+  data-scalar-x="600" data-scalar-y="3200"
+  data-relative-input="true"
+  data-origin-x="0.5" data-origin-y="0.5"
+  data-relative-input="true"
+  data-pointer-events="true">
+    <div data-depth="0.07">
+      <a><div id="image1" class="image ues castelli"></div></a>
+      <a><div id="image2" class="image ues castelli"></div></a>
+      <div id="image5" class="image uws century"></div>
+      <div id="image6" class="image uws century"></div>
+      <div id="image7" class="image uws janis"></div>
+      <div id="image8" class="image uws janis"></div>
+      <div id="image9" class="image uws janis"></div>
+      <div id="image10" class="image ues rothko"></div>
+      <div id="image11" class="image ues rothko"></div>
+      <div id="image12" class="image ues rothko"></div>
+      <div id="image13" class="image uws moma"></div>
+      <div id="image14" class="image uws parsons"></div>
+      <div id="image15" class="image uws parsons"></div>
+      <div id="image16" class="image uws moma"></div>
+      <div id="image17" class="image uws moma"></div>
+      <div id="image18" class="image uws moma"></div>
+      <div id="image19" class="image chelsea de-kooning"></div>
+      <div id="image20" class="image chelsea de-kooning"></div>
+      <div id="image21" class="image chelsea tavern"></div>
+      <div id="image22" class="image chelsea tavern"></div>
+      <div id="image23" class="image chelsea tavern"></div>
+      <div id="image24" class="image chelsea kline"></div>
+      <div id="image25" class="image chelsea kline"></div>
+      <div id="image26" class="image chelsea krasner"></div>
+      <div id="image27" class="image chelsea krasner"></div>
+      <div id="image28" class="image chelsea studio35"></div>
+      <div id="image29" class="image chelsea studio35"></div>
+      <div id="image30" class="image chelsea studio35"></div>
+      <div id="image31" class="image chelsea studio35"></div>
+    </div>
+  </div>
 
-        $('.parsons').click('click touchstart', function() {
-          var sidebar = anime({
-                targets: '#betty-parsons',
-                marginLeft: '0vw',
-                duration: 400,
-                easing: 'easeInOutExpo',
-              })
-            var cursorScale = anime({
-              targets: '#cursor',
-              rotate: '45deg',
-              scale: 2,
-            })
-            var closeSidebar = anime({
-              targets:'.close-sidebar',
-              scale: 1,
-              opacity: 0.85,
-              easing: 'easeInOutQuad',
-              duration:200,
-              zIndex: 10000000000,
-            })
-          })
-        
-          
+<div class="sidebar" id="leo-castelli">
+  <div class="subhead">Castelli Gallery,<br>8 East 77th Street</div>
+  <div class="body-copy">Leo Castelli was one of the earliest proponents of the New York School. Castelli, and his wife, were two of the three non-artist members of The Club. Castelli worked closely with the artists and was involved in organizing the famous Ninth Street Show in 1951, which was one of the first shows to display Abstract Expressionist works. Before opening his gallery in 1957, Castelli worked closely with gallerist Sidney Janis who was also an early supporter of the New York School. The Castelli Gallery opened down the street from the Sidney Janis Gallery and became one of the most prominent galleries in the world. The gallery showcased Abstract Expressionists, such as Jackson Pollock, Willem de Kooning and others. The gallery remains open today in its original location and often exhibits work from its past.
+  </div>
+  <a class="source" href="https://www.artsy.net/article/artsy-editorial-leo-castelli-changed-art-market-forever" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/KpeK4DYWJn6xZpDr7" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <div class="source"><b>↗</b> Return to Map</div> -->
+  <!-- <a href="https://goo.gl/maps/DBF29TMG8ZA1iXgdA" target="_blank"><div class="get-directions">Get Directions →</div></a> -->
+</div>
 
-            $('.century').click('click touchstart', function() {
-              var sidebar = anime({
-                    targets: '#century-gallery',
-                    marginLeft: '0vw',
-                    duration: 400,
-                    easing: 'easeInOutExpo',
-                  })
-                var cursorScale = anime({
-                  targets: '#cursor',
-                  rotate: '45deg',
-                  scale: 2,
-                })
-                var closeSidebar = anime({
-                  targets:'.close-sidebar',
-                  scale: 1,
-                  opacity: 0.85,
-                  easing: 'easeInOutQuad',
-                  duration:200,
-                  zIndex: 10000000000,
-
-                })
-              })
-            
-            
-                $('.janis').click('click touchstart', function() {
-                  var sidebar = anime({
-                        targets: '#janis-gallery',
-                        marginLeft: '0vw',
-                        duration: 400,
-                        easing: 'easeInOutExpo',
-                      })
-                    var cursorScale = anime({
-                      targets: '#cursor',
-                      rotate: '45deg',
-                      scale: 2,
-                    })
-                    var closeSidebar = anime({
-                      targets:'.close-sidebar',
-                      scale: 1,
-                      opacity: 0.85,
-                      easing: 'easeInOutQuad',
-                      duration:200,
-                      zIndex: 10000000000,
-
-                    })
-                  })
-                
-
-
-                    $('.moma').click('click touchstart', function() {
-                      var sidebar = anime({
-                            targets: '#moma',
-                            marginLeft: '0vw',
-                            duration: 400,
-                            easing: 'easeInOutExpo',
-                          })
-                          var closeSidebar = anime({
-                            targets:'.close-sidebar',
-                            scale: 1,
-                            opacity: 0.85,
-                            easing: 'easeInOutQuad',
-                            duration:200,
-                            zIndex: 10000000000,
-
-                          })
-                        var cursorScale = anime({
-                          targets: '#cursor',
-                          rotate: '45deg',
-                          scale: 2,
-                        })
-                      })
-                    
-                      
-
-                        $('.de-kooning').click('click touchstart', function() {
-                          var sidebar = anime({
-                                targets: '#de-kooning',
-                                marginLeft: '0vw',
-                                duration: 400,
-                                easing: 'easeInOutExpo',
-                              })
-                              var closeSidebar = anime({
-                                targets:'.close-sidebar',
-                                scale: 1,
-                                opacity: 0.85,
-                                easing: 'easeInOutQuad',
-                                duration:200,
-                                duration:200,
-                                zIndex: 10000000000,
-
-                              })
-                            var cursorScale = anime({
-                              targets: '#cursor',
-                              rotate: '45deg',
-                              scale: 2,
-                            })
-                          })
-
-                          $('.tavern').click('click touchstart', function() {
-                            var sidebar = anime({
-                                  targets: '#tavern',
-                                  marginLeft: '0vw',
-                                  duration: 400,
-                                  easing: 'easeInOutExpo',
-                                })
-                              var closeSidebar = anime({
-                                targets:'.close-sidebar',
-                                scale: 1,
-                                opacity: 0.85,
-                                easing: 'easeInOutQuad',
-                                duration:200,
-                                zIndex: 10000000000,
-
-                              })
-                              var cursorScale = anime({
-                                targets: '#cursor',
-                                rotate: '45deg',
-                                scale: 2,
-                              })
-                            })
-
-                            $('.sidebar, .close-sidebar').click('click touchstart', function() {
-                              var sidebar = anime({
-                                    targets: '.sidebar',
-                                    marginLeft: '-55vw',
-                                    duration: 400,
-                                    easing: 'easeInOutExpo',
-                                  })
-                                var sidebar = anime({
-                                  targets:'.close-sidebar',
-                                  zIndex: 0,
-                                })
-                                var cursorScale = anime({
-                                  targets: '#cursor',
-                                  rotate: '0deg',
-                                  scale: 2,
-                                })
-                              })
-
-
-// $(document).load('click touchstart', function() {
-//    var sidebar = anime({
-//       targets: '#about',
-//       translateX:'-50%',
-//        translateY:'-50%',
-//        opacity: 1,
-//        scale: 1,
-//        duration: 400,
-//        easing: 'easeInOutExpo',
-//       })
-//     var haze = anime({
-//       targets:'#haze',
-//       scale: 1,
-//       opacity: '0.85',
-//     })
-//     var cursorScale = anime({
-//       targets: '#cursor',
-//       rotate: '45deg',
-//       scale: 2,
-//       })
-// })
-
-$('#haze').click('click touchstart', function() {
-  var sidebar = anime({
-     targets: '.info-popup',
-     translateX:'-50%',
-      translateY:'-50%',
-      opacity: 0,
-      scale: 0,
-      duration: 400,
-      easing: 'easeInOutExpo',
-     })
-   var haze = anime({
-     targets:'#haze',
-     scale: 0,
-     opacity: '0',
-   })
-   var cursorScale = anime({
-     targets: '#cursor',
-     rotate: '0deg',
-     scale: 1,
-     })
-})
-
-$('.image').mouseover('click touchstart', function() {
-  var sidebar = anime({
-     targets: '#cursor',
-      width: '45px',
-      height: '45px',
-      duration: 400,
-      easing: 'easeInOutExpo',
-     })
-})
-
-$body = $("body");
-
-
-var translateX = 0,
-    translateY = 0,
-    translateZ = 0,
-    stepZ = 3,
-    initial_obj_X = 0,
-    initial_obj_Y = 0,
-    initial_mouse_X = 0,
-    initial_mouse_Y = 0;
-
-  function apply_coords() {
-    $("#container").css("transform", 'perspective(100px) translate3d(' + translateX + 'px, ' + translateY + 'px, ' + translateZ + 'px)');
-  }
-
-
-
-  $("#container").on("mousewheel DOMMouseScroll", function(e) {
-
-    e.preventDefault();
-    var delta = e.delta || e.originalEvent.wheelDelta;
-    var zoomOut;
-
-    if (delta === undefined) {
-      delta = e.originalEvent.detail;
-      zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-      zoomOut = !zoomOut;
-    } else {
-      zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-    }
-    if (zoomOut) {
-      translateZ = translateZ - stepZ;
-    } else {
-      translateZ = translateZ + stepZ;
-    }
-
-    if (translateZ > 40){
-      return
-    }
-    if (-translateZ > 90){
-      return
-    }
-    console.log(translateZ)
-    apply_coords();
-  });
-
-  $('#learn').mouseover('click touchstart', function() {
-    var sidebar = anime({
-       targets: '#cursor',
-        scale: '2',
-        duration: 100,
-       })
-  })
-  $('#learn').mouseleave('click touchstart', function() {
-    var sidebar = anime({
-       targets: '#cursor',
-        scale: '2',
-        duration: 100,
-       })
-  })
-
-  // var myVar;
-
-  // function myFunction() {
-  //   myVar = setTimeout(showPage, 3000);
-  // }
+<div class="sidebar" id="mark-rothko">
+  <div class="subhead">Rothko Studio,<br>157 East 69th Street</div>
+  <div class="body-copy">Mark Rothko moved to New York City in the 1920s and quickly found himself immersed in the vast artistic community in the city, including gallery exhibitions with modernist works and museums both of which proved to be invaluable resources for his career. It was in New York City that Rothko had his first solo show and gained the recognition of many of the city’s art critics. Mayn years later, after moving in and out of the city, Rothko returned to New York and met with art dealer, Peggy Guggenheim. In 1945, Rothko displayed 15 of his works at Guggenheim’s noted Art of This Century Gallery. While this exhibit received negative feedback from critics, Rothko was inspired to move towards more of an abstracted style and created the works he’s known for today.</div>
+  <div class="citation-side">Source: <i>Mark Rothko</i>, The Art Story</div>
+  <a class="source" href="https://www.nytimes.com/1970/03/08/archives/mark-rothko-190370-mark-rothko-19031970.html" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/4oR8VsSKkg5iadbMA" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
   
-  // function showPage() {
-  //   document.getElementById("loading").style.display = "none";
-  //   // document.getElementById("body").style.display = "block";
-  // }
+
+<div class="sidebar" id="betty-parsons">
+  <div class="subhead">Betty Parsons Gallery,<br>15 West 57th Street</div>
+  <div class="body-copy">Betty Parsons was an early advocate of The New York School and rarely turned artists away from exhibiting work at her gallery. The gallery displayed the works of Jackson Pollock, Mark Rothko, Ad Reinhardt and others, long before they were household names. The gallery was one of the firsts to give the Abstract Expressionists their first large-scale exposure, especially after Guggenheim’s Art of This Century Gallery closed in 1947. Betty Parsons went on to promote the works of many gay artists in the years to come, such as Ellsworth Kelly and Robert Rauschenberg. After the passing of Parsons in 1982, the gallery continued to operate for just a few more years before closing. While Parsons is most known for her work as a gallerist, she was an artist herself and closed her gallery each summer to focus on her own work.</div>
+  <div class="citation-side">Source: <i>The Betty Parsons Gallery</i>, The Art Story</div>
+  <a class="source" href="https://www.widewalls.ch/betty-parsons-gallery-artist/" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/XwLb8PrTgNXbZk5NA" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="century-gallery">
+  <div class="subhead">Art of This Century Gallery,<br>30 West 57th Street</div>
+  <div class="body-copy">Peggy Guggenheim’s Art of This Century Gallery opened in 1942 and played a critical role in launching the careers of many of the artists involved in The New York School. The gallery was opened for five years and was the first to exhibit the works of the Abstract Expressionists, most notably, Jackson Pollock. The gallery was almost like Guggenheim’s laboratory for exhibiting the most avant-garde works of the time and the gallery was set up in a way that encouraged viewers to interact with the artworks instead of just observing the art. The Art of This Century Gallery displayed the works of both American and European artists, often at the same time, which helped underline the importance of American art during a time when European art reigned supreme. Guggenheim’s willingness to promote young American artists helped instill a sense of confidence in the New York art scene.</div>
+  <div class="citation-side">Source: <i>The Art of This Century Gallery</i>, The Art Story</div>
+  <a class="source" href="https://www.telegraph.co.uk/culture/art/3663807/How-curved-walls-and-a-female-Casanova-brought-modern-art-to-America.html" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/5qXnq17o1WGRM5rE7" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
 
 
+<div class="sidebar" id="janis-gallery">
+  <div class="subhead">Janis Gallery,<br>110 West 57th Street</div>
+  <div class="body-copy">The Sidney Janis Gallery opened in 1948 and exhibiting many European artists, such as Matisse and Mondrian, in order to establish the gallery’s reputation in New York City. After becoming one of the most respected galleries in the city, Janis, along with his wife Harriet, went on the exhibit many of the artists involved in the New York School and give them their first solo shows. In 1952, Janis gave Jackson Pollock his first of three solo shows at the gallery and later put on its most famous exhibition entitled The New Realists. Around this time, Sidney Janis worked with gallerist, Leo Castelli, before he opened up his own gallery down the street. The gallery closed in 1999.</div>
+  <div class="citation-side">Source: <i>The Sidney Janis Gallery</i>, The Art Story</div>
+  <a class="source" href="https://www.latimes.com/archives/la-xpm-1989-11-24-mn-34-story.html" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/voes1PiT7JRp8ALc9" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source">Keep Exploring <span style="font-size: 15px; font-weight: bold;">↗</span></div></a> -->
+</div>
 
-// close document.ready
-});
+<div class="sidebar" id="moma">
+  <div class="subhead">Museum of Modern Art,<br>11 East 53rd Street</div>
+  <div class="body-copy">Founded in 1929, The Museum of Modern Art in midtown Manhattan was the first museum devoted to the modern era. Today MoMA’s rich and varied collection offers a panoramic overview of modern and contemporary art, from the innovative European painting and sculpture of the 1880s to today's film, design, and performance art. From an initial gift of eight prints and one drawing, the collection has grown to include over 150,000 paintings, sculptures, drawings, prints, photographs, architectural models and drawings, and design objects; approximately 22,000 films and four million film stills; and, in its Library and Archives, over 300,000 books, artist books, and periodicals, and extensive individual files on more than 70,000 artists. Collection highlights include Claude Monet’s Water Lilies, Vincent van Gogh’s The Starry Night, and Pablo Picasso’s Les Demoiselles d'Avignon, along with more recent works by Andy Warhol, Elizabeth Murray, Cindy Sherman, and many others.</div>
+  <div class="citation-side">Source: <i>The History of the MoMA</i>, MoMA</div>
+  <a class="source" href="https://www.moma.org/about/who-we-are/moma-history" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/dZ2k2g5GEvizL5FdA"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="de-kooning">
+  <div class="subhead">De Kooning Studio,<br>156 West 22nd Street</div>
+  <div class="body-copy">De Kooning first moved to the New York area and bounced between many odd-end jobs before being able to devote himself to art. He struggled to stay in New York City but found the community of artists in New York City too valuable to abandon. After some time living in the city, de Kooning became involved in the Works Progress Administration’s and was able to focus entirely on fine art for the first time in his career. During that time, De Kooning was able to forge relationships with artists, gallerists and art critics; most notably, Harold Rosenberg who became one of de Kooning’s biggest supporters. In 1936, de Kooning was included in an exhibition at the MoMA. Around this time, the artist took on Elaine Fried as a student and she later became his wife. Elaine de Kooning became a prominent art critic and Abstract Expressionist in her own right. De Kooning is best known for his paintings of women, which were first exhibited at the Sidney Janis Gallery in 1953. Woman I was purchased from the Sidney Janis Gallery by MoMA, confirming the importance of the artist’s work to critics in the community.</div>
+  <div class="citation-side">Source: <i>Willem de Kooning</i>, The Art Story</div>
+  <a class="source" href="https://www.artsy.net/article/artsy-editorial-elaine-de-kooning-broke-rules-painting-men-secured-place-art-history" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/yMyKSPcrEQXvwTRf7" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="tavern">
+  <div class="subhead">Cedar Tavern,<br>82 University Place</div>
+  <div class="body-copy">Cedar Tavern was at the center of the New York School community as a popular meeting place for the Abstract Expressionist painters and creatives alike. It was the primary hangout for the avant-garde. Elaine de Kooning referred to Cedar Tavern as the epicenter of a “decade-long bender.” Artist Ad Reinhardt once said, “We go there to meet the very people we hate most, other painters.” Cedar Tavern remained opened on University Place up until 2006.</div>
+  <div class="citation-side">Source: <i>The History of the East Village's Cedar Tavern</i>, The Culture Trip</div>
+  <a class="source" href="https://www.nytimes.com/2013/05/18/opinion/bye-bye-bohemia.html" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/1GYvFHm22L9GiQZo6" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="krasner">
+  <div class="subhead">Krasner-Pollock Studio,<br>46 East 8th Street</div>
+  <div class="body-copy">Pollock moved to New York City in the 1930s, where he lived with his brothers in Greenwich Village. He later met Lee Krasner who was really intrigued by his work. The two shared a studio space and did so for much of the remainder of their careers. Kraser, who was a student of Hans Hofmann’s at the time, showed Pollock’s work to her teacher who was similarly intrigued. Hofmann is believed to have told Pollock he needs to work more from nature, and to which Pollock famously replied “I don’t need nature, I am nature.” Pollock continued producing work without much success in his studio that he shared with Krasner, who was also producing avant-garde work of her own at the time. The artist struggled financially and had various jobs, one as a custodian for the Museum of Non-Objective Painting (later the Guggenheim Museum.) While there, Pollock met Peggy Guggenheim who later gave Pollock his first solo show in her Art of This Century Gallery.</div>
+  <div class="citation-side">Source: <i>Jackson Pollock</i>, The Art Story</div>
+  <a class="source" href="https://www.theguardian.com/artanddesign/2019/may/12/lee-krasner-artist-formerly-known-as-mrs-jackson-pollock-barbican-exhibition" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/4LLt6NUNGoEU3DRc9" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="kline">
+  <div class="subhead">Kline Studio<br>32 East 10th Street</div>
+  <div class="body-copy">During his time in New York City, Franz Kline met artists Willem de Kooning, Jackson Pollock and Phillip Guston after frequenting the Cedar Tavern in Greenwich Village. Before meeting de Kooning, Kline’s work was shaped by his love of Old Masters, such as Rembrandt, but he began to move away from representational paintings under the influence of Willem de Kooning. Kline’s first exhibition took place at the Egan Gallery in 1950 and established his reputation in the New York art scene. He went on to exhibit works at many galleries throughout the city, including a solo show at the Sidney Janis Gallery in June of 1958. </div>
+  <div class="citation-side">Source: <i>Franz Kline</i>, The Art Story</div>
+  <a class="source" href="https://www.nytimes.com/1986/01/19/arts/art-view-franz-kline-a-legacy-in-black-and-white.html" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/nWv1ShQZgApp9SWWA" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+<div class="sidebar" id="studio35">
+  <div class="subhead">The Hans Hofmann School of Fine Arts,<br>52 West 8th Street</div>
+  <div class="body-copy">After teaching art around the world, from Germany to California, renowned artist Hans Hofmann moved to New York to open up a school which he called the Hans Hofmann School of Fine Arts. Arshile Gorky and Lee Krasner were just a few of the artists that attended the school, both of whom cited Hofmann as having a major influence on their work. At the school, Hofmann encouraged his students to focus on a single artistic medium which differed from the approach of other art schools at that time, such as Black Mountain college which had a curriculum designed by Bauhaus legend, Josef Albers. Hofmann was well connected with the Abstract Expressionists, especially artists such as Lee Krasner and Jackson Pollock.</div>
+  <div class="citation-side">Source: <i>Hans Hofmann School of Fine Arts</i>, The Art Story</div>
+
+  <a class="source" href="https://www.artnews.com/art-news/news/hans-hofmann-paints-a-picture-2125/" target="blank"><b>↗</b> Learn More</a>
+  <a class="source" href="https://goo.gl/maps/dxUKNBE9cYMCacKd7" target="blank"><b>↗</b> Get Directions</a>
+  <!-- <a><div class="source"><b>↗</b> Return to Map</div></a> -->
+</div>
+
+
+<svg id="cursor" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.38 85.38"><defs><style>.cls-1{fill:#fff;stroke:#3d6eb6;stroke-miterlimit:10;stroke-width:3px;}</style></defs><polygon class="cls-1" points="83.88 37.93 47.45 37.93 47.45 1.5 37.93 1.5 37.93 37.93 1.5 37.93 1.5 47.45 37.93 47.45 37.93 83.88 47.45 83.88 47.45 47.45 83.88 47.45 83.88 37.93"/></svg>
+<!-- <canvas id="paint"></canvas> -->
+<!-- <div class="info-popup">This site was designed and developed by Lauren Fox for her capstone project at the Sam Fox School of Design & Visual Arts at Washington University in St. Louis. Special thanks to Jonathan Hanahan and my incredible studio mates for all their help and encouragement along the way. The typography used throughout the site is F Grotesk designed by <u>Radim Pesko</u> and Suisse Works by <u>Swiss Typefaces</u>.</div> -->
+<!-- <svg id="arrow" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.19 76.14"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:6px;}</style></defs><line class="cls-1" x1="18" y1="3.07" x2="75.17" y2="3.07"/><line class="cls-1" x1="73.19" x2="73.19" y2="57.18"/><line class="cls-1" x1="72.66" y1="3.48" x2="2.12" y2="74.02"/></svg> -->
+</div>
+
+<!-- <div id="about">The New York School was a group of artists, painters, poets, dancers and more creating work during the 1950s and 1960s in New York City. This group of artists later became known as Abstract Expressionists and the movement is often referred to as the New York School. The twenty-year period defined New York City as the center of the art world and shined a light on American and immigrant artists from all over the world working in New York City </div> -->
+
+</body>
+</html>
