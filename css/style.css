@@ -1051,7 +1051,7 @@ a{
   /* mix-blend-mode: screen; */
 }
 
-/* #n{
+#n{
   width: 98vw;
   height: auto;
   position: fixed;
@@ -1064,8 +1064,7 @@ a{
   line-height: 26px;
   text-align: center;
   z-index: 0;
-  /* mix-blend-mode: screen; */
-} */
+} 
 
 #s{
   width: 98vw;
