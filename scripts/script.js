@@ -68,7 +68,7 @@ $('#intro').click(function(){
 $('#intro').mouseover(function(){
   var expandIntro = anime({
     targets:"#intro",
-    height: '305px'
+    height: '5px'
   })
 
 })
@@ -1059,10 +1059,10 @@ var translateX = 0,
       translateZ = translateZ + stepZ;
     }
 
-    if (translateZ > 40){
+    if (translateZ > 20){
       return
     }
-    if (-translateZ > 90){
+    if (-translateZ > 150){
       return
     }
     console.log(translateZ)
