@@ -1050,7 +1050,7 @@ a{
   line-height: 26px;
   text-align: center;
   z-index: 100;
-  mix-blend-mode: screen;
+  /* mix-blend-mode: screen; */
 }
 
 #x{
