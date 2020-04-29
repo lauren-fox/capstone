@@ -584,6 +584,18 @@ body{
   background-repeat: repeat;
 }
 
+#compass{
+  width: 80vw;
+  height: 90vh;
+  position: absolute;
+  z-index: 0;
+  top:0;
+  left:10vw;
+  background: url('../images/compass-06.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #info{
   width: 25px;
   position: fixed;
@@ -1060,7 +1072,7 @@ a{
   z-index: 10000;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 15px;
+  font-size: 12px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
@@ -1070,16 +1082,15 @@ a{
   width: 98vw;
   height: auto;
   position: fixed;
-  bottom: 94px;
+  bottom: 91px;
   left: 0;
   z-index: 10000;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 15px;
+  font-size: 12px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
-  /mix-blend-mode: screen;
 }
 
 #s:hover{
@@ -1114,7 +1125,7 @@ a{
   width: 98vw;
   height: auto;
   position: fixed;
-  bottom: 74px;
+  bottom: 71px;
   left: 0;
   z-index: 10000;
   color: #919191;
@@ -1146,7 +1157,7 @@ a{
   left: 94px;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 15px;
+  font-size: 12px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
@@ -1172,7 +1183,7 @@ a{
   right: 94px;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 15px;
+  font-size: 12px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
