@@ -811,7 +811,6 @@ a:visited{
 
 #janis-gallery a{
   color:#376ec0;
-  text-decoration: none;
 }
 
 #century-gallery a{
@@ -1202,4 +1201,5 @@ hr{
 
 a{
   cursor: none;
+  text-decoration: none;
 }
