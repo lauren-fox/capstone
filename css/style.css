@@ -767,6 +767,21 @@ a:visited{
   border:1px solid #376ec0;
 }
 
+
+
+#krasner-sidebar.sidebar{
+  box-shadow: 2px 5px 8px -3px  #8d8d8d;
+  color:#376ec0;
+}
+#krasner-sidebar a{
+  color:#376ec0;
+}
+#krasner-sidebar.get-directions{
+  border:1px solid #376ec0;
+}
+
+
+
 #studio35.sidebar{
   box-shadow: 2px 5px 8px -3px  #8d8d8d;
   color:#376ec0;
@@ -1072,7 +1087,7 @@ a{
   z-index: 10000;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 12px;
+  font-size: 11px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
@@ -1082,12 +1097,12 @@ a{
   width: 98vw;
   height: auto;
   position: fixed;
-  bottom: 91px;
+  bottom: 88px;
   left: 0;
   z-index: 10000;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 12px;
+  font-size: 11px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
@@ -1125,7 +1140,7 @@ a{
   width: 98vw;
   height: auto;
   position: fixed;
-  bottom: 71px;
+  bottom: 68px;
   left: 0;
   z-index: 10000;
   color: #919191;
@@ -1157,7 +1172,7 @@ a{
   left: 94px;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 12px;
+  font-size: 11px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
@@ -1183,7 +1198,7 @@ a{
   right: 94px;
   color: #919191;
   font-family: 'StandardBook';
-  font-size: 12px;
+  font-size: 11px;
   line-height: 26px;
   text-align: center;
   z-index: 0;
