@@ -68,7 +68,7 @@ $('#intro').click(function(){
 $('#intro').mouseover(function(){
   var expandIntro = anime({
     targets:"#intro",
-    height: '5px'
+    height: '0px'
   })
 
 })
@@ -506,14 +506,14 @@ $('#image30').mouseleave('click touchstart', function() {
 });
    
 
-  $('#x, .overlay').click('click touchstart', function() {
-      var caption = anime({
-            targets: '.intro, .overlay, #x',
-            top: -3000,
-            opacity:0,
-            duration: 6000,
-          })
-  });
+  // $('#x, .overlay').click('click touchstart', function() {
+  //     var caption = anime({
+  //           targets: '.intro, .overlay, #x',
+  //           top: -3000,
+  //           opacity:0,
+  //           duration: 6000,
+  //         })
+  // });
 
 
   $('.right').mouseover('click touchstart', function() {
@@ -757,6 +757,27 @@ $('.castelli').click('click touchstart', function() {
 
         })
       })
+
+      $('.krasner-1').click('click touchstart', function() {
+        var sidebar = anime({
+              targets: '#krasner-sidebar',
+              marginLeft: '0vw',
+              duration: 400,
+              easing: 'easeInOutExpo',
+            })
+          var cursorScale = anime({
+            targets: '#cursor',
+            rotate: '45deg',
+            scale: 2,
+          })
+          var closeSidebar = anime({
+            targets:'.close-sidebar',
+            left:'50vw',
+            easing: 'easeInOutQuad',
+            zIndex: 10000000000,
+  
+          })
+        })
 
       $('.studio35').click('click touchstart', function() {
         var sidebar = anime({
